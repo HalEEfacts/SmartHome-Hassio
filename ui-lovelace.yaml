@@ -3,9 +3,9 @@ resources:
     type: module
   - url: /local/custom_ui/dark-sky-weather-card.js?v=4
     type: js
-  - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.6
+  - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.7
     type: module
-#  - url: /local/custom_ui/mini-media-player.js?v=0.9.6
+#  - url: /local/custom_ui/mini-media-player.js?v=0.9.7
 #    type: module
 #  - url: /local/mini-media.player.js?v=0.9.1
 #    type: module
@@ -55,7 +55,10 @@ views:
             head: group.familyroomlights
           - type: custom:fold-entity-row
             head: group.bedroomlights
-
+      -  type: entities
+         title: Christmas
+         entities:
+           - switch.012004762c3ae83ceab3
 #########################################
 # Media Cards, only show when playing   #
 #########################################

@@ -3621,3 +3621,277 @@ Traceback (most recent call last):
 requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 2018-12-13 09:23:00 ERROR (MainThread) [hole] Can not load data from *hole: localhost
 2018-12-13 09:23:00 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:28:09 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:28:09 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:33:18 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:33:18 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:36:36 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: None
+2018-12-13 09:38:27 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:38:27 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:43:36 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:43:36 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:48:46 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:48:46 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:53:56 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:53:56 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 09:59:06 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 09:59:06 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:04:15 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:04:15 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:04:20 ERROR (MainThread) [frontend.js.latest.201811211] http://192.168.2.34:8123/lovelace/7:0:0 Uncaught 
+2018-12-13 10:09:25 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:09:25 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:14:35 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:14:35 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:19:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:19:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:22:54 WARNING (SyncWorker_0) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 10:23:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-12-13 10:23:22 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 10:23:53 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 10:24:55 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:24:55 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:30:06 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:30:06 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:35:15 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:35:15 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:40:25 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:40:25 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:45:35 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:45:35 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:50:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:50:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 10:55:54 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 10:55:54 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:01:03 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:01:03 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:02:08 WARNING (SyncWorker_1) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 11:06:13 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:06:13 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:09:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-12-13 11:09:50 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:10:21 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:10:21 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 190, in update
+    current = self._player.current_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 856, in current_playback
+    return self._get("me/player", market = market)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 11:11:23 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:11:23 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:12:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 11:12:25 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 11:12:26 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:13:07 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 11:13:09 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:16:33 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:16:33 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:21:43 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:21:43 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:26:53 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:26:53 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:31:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-12-13 11:32:03 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:32:03 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:32:03 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:32:34 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:33:05 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:33:36 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 11:33:36 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 190, in update
+    current = self._player.current_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 856, in current_playback
+    return self._get("me/player", market = market)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 11:37:13 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:37:13 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole

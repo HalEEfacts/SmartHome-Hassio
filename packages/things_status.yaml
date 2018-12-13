@@ -118,6 +118,7 @@ device_tracker:
   - platform: nmap_tracker
     hosts:
       - 192.168.2.11 #Google Mini
+      - 192.168.2.14 #Wemo_Switch
       - 192.168.2.16 #S8
       - 192.168.2.19 # Alexa Dot
       - 192.168.2.23 #Laptop
