@@ -1,0 +1,218 @@
+### From: https://github.com/skalavala/smarthome/blob/master/packages/notify.yaml
+
+homeassistant:
+  customize:
+
+    script.ifttt_notify:
+      hidden: true
+    script.notify_me:
+      hidden: true
+
+    
+ifttt:
+  key: !secret ifttt_key
+
+notify:
+
+        ##########################################################
+        ## Pushbullet
+        ##########################################################
+  - name: Pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api
+    
+        ##########################################################
+        ## LG TV
+        ##########################################################
+  - platform: webostv
+    host: !secret webostv_host
+    name: livingroom_tv_notify
+    filename: webostv.conf
+
+################################################################################
+#Input_....
+################################################################################
+input_boolean:
+  test_audio_notification:
+    name: Test Audio Notification
+    initial: off
+    icon: mdi:test-tube
+
+  test_text_notification:
+    name: Test Text Notification
+    initial: off
+    icon: mdi:test-tube
+
+  test_webostv_notification:
+    name: Test WebOS Notification
+    initial: off
+    icon: mdi:test-tube
+
+################################################################################
+#Group
+################################################################################
+group:
+  Notify Scripts:
+    control: hidden
+    entities:
+      - script.ifttt_notify
+      - script.notify_me
+
+###############################################################################
+#Automations
+###############################################################################
+automation:
+
+        ##########################################################
+        ## WebOS - Notification Test
+        ##########################################################
+  - alias: WebOS Notification Test
+    trigger:
+      platform: state
+      entity_id: input_boolean.test_webostv_notification
+      from: 'off'
+      to: 'on'
+    condition:
+      condition: state
+      entity_id: device_tracker.life360_trevor
+      state: 'home'
+    action:
+      - service: notify.livingroom_tv_notify
+        data:
+          message: "Notify Test: Hello, 1, 2, 3"
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.test_webostv_notification
+
+
+
+        ##########################################################
+        ## TTS - Notification Test
+        ##########################################################
+  - alias: Notification Audio - Test
+    trigger:
+      platform: state
+      entity_id: input_boolean.test_audio_notification
+      from: 'off'
+      to: 'on'
+    action:
+    - service: tts.google_say
+      entity_id: media_player.dining_room_mini
+      data_template:
+        message: Testing. One, two, three.
+    - delay: '00:00:01'
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.test_audio_notification
+
+#################################################################
+## Text Notification Automations
+#################################################################
+        ##########################################################
+        ## Server Restarted
+        ##########################################################
+  - alias: HA Restart
+    initial_state: 'on'
+    trigger:
+      platform: homeassistant
+      event: start
+    action:
+      - service: notify.pushbullet
+        data:
+          title: 'HA HASSIO Server'
+          message: 'Main HA Server Restarted'
+  
+        ##########################################################
+        ## Failed Login
+        ##########################################################
+
+  - alias: Notification Failed Login
+    trigger:
+      platform: template
+      value_template: "{{ states('persistent_notification.httplogin') != 'unknown' }}"
+    action:
+      - service: notify.pushbullet
+        data:
+          title: "Home Assistant"
+          message: "Failed Home Assistant login!"
+
+## to do: https://community.home-assistant.io/t/some-fun-with-automation-persistant-notification-and-tts/6473
+
+#  - alias: Reminder to go to school
+#    trigger:
+#        platform: time
+#        at: '8:25'
+#    action:
+#        service: tts.google_say
+#        entity_id: media_player.dining_room_mini
+#        data:
+#          message: 'Its time to go to school'
+
+# works, make it so i need to be home
+#  - alias: TV off, bedtime
+#    trigger:
+#      platform: time
+#      at: '22:58'
+#    action:
+#        service: tts.google_say
+#        entity_id: media_player.dining_room_mini
+#        data_template:
+#          message:  Good night. The TV is {{ states('media_player.living_room_tv_2') }} and the temperature is {{ states.sensor.dark_sky_temperature.state | round }} degrees.
+
+        #########################################################
+        #FAILED LOGIN ATTEMPTS
+        #########################################################
+
+  - alias: "Send notification upon failed login attempt"
+    trigger:
+      - platform: state
+        entity_id: persistent_notification.httplogin
+    condition:
+      - condition: template
+        value_template: "{{ trigger.to_state.state != 'None' }}"
+    action:
+      - service: notify.home_assistant
+        data_template:
+          title: "{{ states.persistent_notification.httplogin.attributes.message }}"
+          message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: 'httplogin'
+
+        #########################################################
+        #NOTIFY OF NEW DEVICE ON NETWORK
+        #########################################################
+
+  - alias: Notify If New Devices
+    trigger:
+      - platform: event
+        event_type: device_tracker_new_device
+    action:
+      - service: notify.home_assistant
+        data_template:
+          message: >
+            New device:
+            {{trigger.event.data.entity_id}}
+          title: New device
+
+################################################################################
+#Scripts
+################################################################################
+script:
+
+  ifttt_notify:
+    sequence:
+      - condition: template
+        value_template: '{{ message | trim != "" }}'
+      - service: ifttt.trigger
+        data_template:
+          event: "Smart_Home"
+          value1: "{{ message }}"
+          value2: ""
+
+  notify_me:
+    sequence:
+      - condition: template
+        value_template: '{{ message | trim != "" }}'
+      - service: script.ifttt_notify
+        data_template:
+          message: "{{ message }}"
+          

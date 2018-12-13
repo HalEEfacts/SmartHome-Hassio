@@ -1,0 +1,117 @@
+###############################################################################
+#   @author         :   Haleefacts
+#   @date           :   07/12/2018
+#   @package        :   
+#   @description    :   
+#   @url            :   
+###############################################################################
+homeassistant:
+  customize:
+
+light:
+  - platform: switch
+    name: Big Lamp
+    entity_id: switch.wemo_switch
+  - platform: switch
+    name: Piano Lamp
+    entity_id: switch.012004762c3ae840b45c
+    
+##########################################################
+#Groups
+##########################################################
+
+group:
+
+  lightgroups:
+   name: Lights
+   view: yes
+   entities:
+     - group.livingroomlights
+     - group.familyroomlights
+     - group.bedroomlights
+
+  Lights:
+    entities:
+      - light.piano_lamp
+      - light.big_lamp
+      - light.small_lamp
+      - light.bedroom
+
+  LivingRoomLights:
+    name: Living Room
+    entities:
+      - light.piano_lamp
+      - light.big_lamp
+
+  FamilyRoomLights:
+    name: Family Room
+    entities:
+      - light.small_lamp
+  BedRoomLights:
+    name: Bedroom
+    entities:
+      - light.bedroom
+
+
+input_number:
+
+input_select:
+
+sensor:
+
+##########################################################
+#Automations
+##########################################################
+automation:
+#######################################
+#        Lights of at bedtime         #
+#######################################
+
+# Works. Just fix so that if media is on then keep on till 5 mintes after (condition)
+  - alias: All lights off at 22:50
+    initial_state: True
+    trigger: 
+      - platform: time
+        at: '22:50:00'
+    condition:
+      condition: state
+      entity_id: media_player.living_room_tv_2
+      state: 'off'
+    action:
+      service: homeassistant.turn_off
+      entity_id: 
+        - group.livingroomlight
+    
+#  This works
+#  trigger:
+#    platform: state
+#    entity_id: light.small_lamp
+#    from: 'off'
+#    to: 'on'
+#  action:
+#    service: script.turn_on
+#    entity_id: script.notify_pushover
+#    data:
+#      variables:
+#        title: 'State change'
+#        message: 'The light is on!'
+
+################################################
+#TURN ON LIVING ROOM LAMPS AT SUNSET (if home) #
+################################################
+
+  - alias: 'Turn On Living Room Lamps'
+    trigger:
+      - platform: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        below: 2.0
+#      platform: sun
+#      event: sunset
+    condition:
+      condition: state
+      entity_id: device_tracker.life360_trevor
+      state: 'Home'
+    action:
+      service: switch.turn_on
+      entity_id: group.livingroomlights

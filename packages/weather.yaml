@@ -1,0 +1,230 @@
+#################################################################
+#Customize
+#################################################################
+
+homeassistant:
+  customize:
+
+    input_boolean.rain_alert:
+      hidden: true
+    input_boolean.snow_alert:
+      hidden: true
+    input_boolean.sleet_alert:
+      hidden: true
+    input_boolean.nice_breeze_alert:
+      hidden: true
+    input_boolean.moderate_wind_alert:
+      hidden: true
+    input_boolean.heavy_wind_alert:
+      hidden: true
+    input_boolean.super_heavy_wind_alert:
+      hidden: true
+    sensor.wind_direction:
+      icon: mdi:weather-windy-variant
+    sensor.wind_direction_tts:
+      icon: mdi:weather-windy-variant
+#################################################################
+#Group
+#################################################################
+
+group:
+  sun:
+    name: Sun
+    view: no
+    entities:
+      - sun.sun
+      - sensor.moon
+
+  Dark Sky:
+    entities:
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_visibility
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_pressure
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_ozone
+      - sensor.dark_sky_nearest_storm_distance
+      - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_dew_point
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_daily_max_precip_intensity
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_daily_low_apparent_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_high_apparent_temperature
+      - sensor.dark_sky_cloud_coverage
+      - sensor.dark_sky_apparent_temperature
+      - sensor.waqi_columbus__fairgrounds_ohio_usa
+      - sensor.wind_direction
+      - sensor.wind_direction_tts
+
+  Weather Automations:
+    control: hidden
+    entities:
+      - automation.remind_me_to_enjoy_warm_and_windy_weather
+      - automation.alert_super_heavy_winds
+      - automation.rain_snow_wind_alerts  
+
+
+#################################################################
+#Sensors
+#################################################################
+
+sensor:
+  - platform: moon
+  - platform: yr
+  - platform: season
+    type: meteorological
+  - platform: worldclock
+    time_zone: America/Halifax
+  - platform: template
+    sensors:
+        local_time:
+          entity_id: sensor.time
+          value_template: "{{ as_timestamp(now())|timestamp_custom('%-I:%M %p') }}"
+        local_date:
+          entity_id: sensor.time_date
+          value_template: "{{ as_timestamp(now())|timestamp_custom('%A %B %-d') }}" 
+        something_to_refresh:
+          value_template: "{{ (states('sensor.local_time')| int - states('sensor.local_date')| int) }}"
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+## Weather Dark Sky
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    forecast:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    monitored_conditions:
+      - icon
+      - summary
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - humidity
+      - temperature
+      - temperature_high
+      - temperature_low
+      - apparent_temperature
+      - apparent_temperature_high
+      - apparent_temperature_low
+      - wind_speed
+      - wind_bearing
+      - precip_type
+      - precip_probability
+      - precip_accumulation
+      - precip_intensity
+      - precip_intensity_max
+      - uv_index
+      - daily_summary
+      - hourly_summary
+      - minutely_summary
+      - pressure
+      - visibility
+    update_interval:
+      minutes: 5
+
+  - platform: template
+    sensors:
+      wind_direction:
+        friendly_name: 'Wind Direction'
+        value_template: >-
+          {% set value = states.sensor.dark_sky_wind_bearing.state | default(0) | float %}
+          {% if value >11  and value <=34 %}NNE
+          {% elif value >34  and value <=56 %}NE
+          {% elif value >56  and value <=79 %}ENE
+          {% elif value >79  and value <=101%}E
+          {% elif value >101 and value <=124 %}ESE
+          {% elif value >124 and value <=146 %}SE
+          {% elif value >146 and value <=169 %}SSE
+          {% elif value >169 and value <=191 %}S
+          {% elif value >191 and value <=214 %}SSW
+          {% elif value >214 and value <=236 %}SW
+          {% elif value >236 and value <=259 %}WSW
+          {% elif value >259 and value <=281 %}W
+          {% elif value >281 and value <=304 %}WNW
+          {% elif value >304 and value <=326 %}NW
+          {% elif value >326 and value <=348 %}NNW
+          {% else %}N
+          {% endif %}
+      wind_direction_tts:
+        friendly_name: 'Wind Direction For TTS'
+        value_template: >-
+          {% set value = states.sensor.dark_sky_wind_bearing.state | default(0) | float %}
+          {% if value >11  and value <=34 %}North and North West
+          {% elif value >34  and value <=56 %}North East
+          {% elif value >56  and value <=79 %}East and North East
+          {% elif value >79  and value <=101%}East
+          {% elif value >101 and value <=124 %}East and South East
+          {% elif value >124 and value <=146 %}South East
+          {% elif value >146 and value <=169 %}South and South East
+          {% elif value >169 and value <=191 %}South
+          {% elif value >191 and value <=214 %}South and South West
+          {% elif value >214 and value <=236 %}South West
+          {% elif value >236 and value <=259 %}West and South West
+          {% elif value >259 and value <=281 %}West
+          {% elif value >281 and value <=304 %}West and North West
+          {% elif value >304 and value <=326 %}North West
+          {% elif value >326 and value <=348 %}North and North West
+          {% else %}N
+          {% endif %}
+      
+
+
+####################################################
+#Weather
+####################################################
+
+sun:
+
+####################################################
+#Input_....
+####################################################
+
+input_boolean:
+  nice_breeze_alert:
+    name: Nice Breeze Alert
+    initial: off
+  moderate_wind_alert:
+    name: Moderate Wind Alert
+    initial: off
+  heavy_wind_alert:
+    name: heavy Wind Alert
+    initial: off
+  super_heavy_wind_alert:
+    name: Super Heavy Wind Alert
+    initial: off
+  hurricane_wind_alert:
+    name: Hurricane Winds Alert
+    initial: off
+  rain_alert:
+    name: Rain Alert
+    initial: off
+  snow_alert:
+    name: Snow Alert
+    initial: off
+  sleet_alert:
+    name: Sleet Alert
+    initial: off
+    
+####################################################
+#Automations
+####################################################
+#To Add from https://github.com/skalavala/smarthome/blob/master/packages/weather.yaml

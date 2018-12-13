@@ -1,0 +1,115 @@
+#################################################################
+## Groups
+#################################################################
+
+  default_view:
+    view: yes
+    icon: mdi:home-assistant
+    entities:
+      - group.livingroom
+      - group.diningroom
+      - group.familyroom
+      - group.bedroom
+      - group.outdoors
+      
+  temperature:
+    name: Temperature Sensors
+    view: yes
+    icon: mdi:weather-cloudy
+    entities:
+      - group.weather
+      
+  media:
+    name: Media
+    view: yes
+    icon: mdi:play-circle-outline
+    entities:
+      - group.media_player
+      
+############################################################
+#                    Groups (Whole Room)                   #
+############################################################
+  LivingRoom:
+    - light.piano_lamp
+    - switch.wemo_switch
+    - group.media_living_room
+    - group.media_living_room_tv_2
+    - switch.012004762c3ae840b45c
+    
+  DiningRoom:
+    - group.media_dining_room
+    
+  FamilyRoom:
+#    - media_player.family_room_tv
+    - group.media_family_room_tv
+    - switch.012004762c3ae83ceab3
+    - light.small_lamp
+    
+  Bedroom:
+    - light.bedroom
+    - light.color_light_1
+    - input_number.blanketminutes
+    
+  Outdoors:
+    - sun.sun
+    - sensor.moon
+    - binary_sensor.iss
+    - sensor.dark_sky_summary
+
+############################################################
+#Groups (Entities/Rooms by Entities)
+############################################################
+
+    
+  Media Player:
+    - media_player.dining_room
+    - media_player.dining_room_mini
+    - media_player.family_room_tv
+    - media_player.living_room
+    - media_player.living_room_tv
+    - media_player.spotify
+    - media_player.living_room_tv_2
+    - sensor.living_room_tv_source
+    
+  cameras:
+    name: Cameras
+    view: yes
+    icon: mdi:cctv
+    entities:
+      - camera.ip_webcam
+      - camera.familyroompi_camera
+      
+  Outlets:
+    entities:
+      - switch.012004762c3ae840b45c
+      - switch.012004762c3ae83ceab3
+      - switch.wemo_switch
+ 
+
+###########################
+#     Scripts             #
+###########################
+
+  Timer:
+    entities:
+      - timer.test
+      - script.pause_timer
+      - script.cancel_timer
+      - script.start_timer
+      - script.finish_timer
+
+
+##################
+#   Automations  #
+##################
+  Automation Disable:
+  - input_boolean.disable_water_sensors
+  - input_boolean.disable_laundry_notification
+
+  Automation Enable:
+  - input_boolean.vacation_mode
+
+#  Automations:
+#        name: Time-based Automations
+#        entities:
+#            - automation.turn_blanket_off_x_time_after_turning_it_on

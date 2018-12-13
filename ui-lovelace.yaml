@@ -1,0 +1,1136 @@
+resources:
+  - url: /local/card-modder.js
+    type: module
+  - url: /local/custom_ui/dark-sky-weather-card.js?v=4
+    type: js
+  - url: /local/custom_ui/mini-media-player-bundle.js?v=0.9.6
+    type: module
+#  - url: /local/custom_ui/mini-media-player.js?v=0.9.6
+#    type: module
+#  - url: /local/mini-media.player.js?v=0.9.1
+#    type: module
+  - url: /local/tracker-card.js?v=0.1.5
+    type: js
+  - url: /local/surveillance-card.js?v=0.0.1
+    type: module
+  - url: /local/custom_ui/circle-sensor-card.js?v=1.2.0
+    type: module
+  - url: /local/lovelace-player.js
+    type: js
+  - url: /local/lovelace-player-config.js?1
+    type: js
+  - url: /local/custom_ui/slider-entity-row.js
+    type: js
+  - url: /local/custom_ui/fold-entity-row.js
+    type: js
+  - url: /local/custom_ui/mini-graph-card-bundle.js?v=0.0.8
+    type: js
+  - url: /local/migrate-card.js
+    type: module
+#  - url: /www/local/custom_ui/layout_card.js
+#    type: module
+#########################################################################################################
+#                                                                                                       #
+#                             Home (common items)                                                       #
+#                                                                                                       #
+#########################################################################################################
+title: Home
+id: home
+views:
+
+  - id: 0  # Automatically created id
+    title: default_view
+    icon: mdi:home-variant
+    cards:
+#unhide when need to re-add id's
+#      - id: a77d0bfb43434fd9af61c4b499bd8dd1  # Automatically created id
+#        type: custom:migrate-card
+      - id: 1
+        type: entities
+        title: Lights
+        entities:
+          - type: custom:fold-entity-row
+            head: group.livingroomlights
+          - type: custom:fold-entity-row
+            head: group.familyroomlights
+          - type: custom:fold-entity-row
+            head: group.bedroomlights
+
+#########################################
+# Media Cards, only show when playing   #
+#########################################
+###TV (webos)
+      - id: 38e6fb14b6ed49f6a8ade9ef321918dc  # Automatically created id
+        type: conditional
+        conditions:
+#          - entity: light.controller_1
+#            state: "on"
+          - entity: media_player.living_room_tv_2
+            state_not: "off"
+        card:
+          type: entities
+          entities:
+            - media_player.living_room_tv_2
+###Chromecasts
+      - id: 115ccd930bee4097a475f56e590486fe  # Automatically created id
+        type: conditional
+        conditions:
+          - entity: media_player.living_room_tv
+            state_not: "off"
+        card:
+          type: entities
+          entities:
+            - media_player.living_room_tv
+      - id: 709e6591e35841629ed3d0c0127db289  # Automatically created id
+        type: conditional
+        conditions:
+          - entity: media_player.family_room_tv
+            state_not: "off"
+        card:
+          type: entities
+          entities:
+            - media_player.family_room_tv
+
+#############################################
+#  Media Player Controller , always on      #
+#############################################
+      - id: 23984fe93b924c1a880502127fb95a94  # Automatically created id
+        type: entities
+        entities:
+          - entity: media_player.living_room
+            type: custom:mini-media-player
+            show_progress: true
+            artwork: full-cover
+            group: true
+            show_shuffle: true
+            show_source: true
+            hide_power: true
+            consider_pause_idle: true
+          - entity: media_player.dining_room
+            type: custom:mini-media-player
+            show_progress: true
+            artwork: cover
+            group: true
+            show_shuffle: true
+            show_source: true
+            hide_power: true
+            consider_pause_idle: true
+          - entity: media_player.dining_room_mini
+            type: custom:mini-media-player
+            hide_controls: true
+            show_tts: google
+            group: true
+          - entity: media_player.living_room_tv
+            type: custom:mini-media-player
+            hide_controls: true
+            group: true
+          - entity: media_player.family_room_tv
+            type: custom:mini-media-player
+            hide_controls: true
+            group: true
+          - entity: media_player.spotify
+            type: custom:mini-media-player
+            group: true
+            show_progress: true
+#        - entity: media_player.livingroom_dashboard
+#          type: custom:mini-media-player
+#          group: true
+
+
+#############################################
+#         Weather                           #
+#############################################
+      - id: a0bfc161675d4da8b84085800e85c621  # Automatically created id
+        type: custom:dark-sky-weather-card
+        show_header_toggle: true
+        entity_sun: sun.sun
+        entity_daily_summary: sensor.dark_sky_daily_summary
+        entity_current_conditions: sensor.dark_sky_icon
+        entity_humidity: sensor.dark_sky_humidity
+        entity_pressure: sensor.dark_sky_pressure
+        entity_temperature: sensor.dark_sky_temperature
+        entity_visibility: sensor.dark_sky_visibility
+        entity_wind_bearing: sensor.dark_sky_wind_bearing
+        entity_wind_speed: sensor.dark_sky_wind_speed
+        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
+        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
+        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
+        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
+        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
+        entity_forecast_icon_1: sensor.dark_sky_icon_1
+        entity_forecast_icon_2: sensor.dark_sky_icon_2
+        entity_forecast_icon_3: sensor.dark_sky_icon_3
+        entity_forecast_icon_4: sensor.dark_sky_icon_4
+        entity_forecast_icon_5: sensor.dark_sky_icon_5
+
+########################################################################################################
+#                                                                                                      #
+#      Lights only page                                                                                #
+#                                                                                                      #
+########################################################################################################
+  - id: 1  # Automatically created id
+    title: Lights
+    cards:
+      - id: c091801bc6c24a73a8e7e8c965238b26  # Automatically created id
+        type: entities
+        title: Living Room
+        show_header_toggle: true
+        entities:
+          - switch.012004762c3ae840b45c
+          - switch.wemo_switch
+      - id: 49bc7b6d405b43c49a25ba4af3a2e431  # Automatically created id
+        type: entities
+        title: Family Room
+        show_header_toggle: true
+        entities:
+          - light.small_lamp
+
+#######################################################################################################
+#                                                                                                     #
+#      Outdoor/ weather page                                                                          #
+#                                                                                                     #
+#######################################################################################################
+
+  - id: 2  # Automatically created id
+    title: Temperature Sensors
+    icon: mdi:weather-cloudy
+    cards:
+
+ #     - type: entities
+      - id: ba385bfd965f48daac843074d888e5d3  # Automatically created id
+        type: custom:dark-sky-weather-card
+        show_header_toggle: true
+        entity_sun: sun.sun
+        entity_daily_summary: sensor.dark_sky_daily_summary
+        entity_current_conditions: sensor.dark_sky_icon
+        entity_humidity: sensor.dark_sky_humidity
+        entity_pressure: sensor.dark_sky_pressure
+        entity_temperature: sensor.dark_sky_temperature
+        entity_visibility: sensor.dark_sky_visibility
+        entity_wind_bearing: sensor.dark_sky_wind_bearing
+        entity_wind_speed: sensor.dark_sky_wind_speed
+        entity_forecast_high_temp_1: sensor.dark_sky_daytime_high_temperature_1
+        entity_forecast_high_temp_2: sensor.dark_sky_daytime_high_temperature_2
+        entity_forecast_high_temp_3: sensor.dark_sky_daytime_high_temperature_3
+        entity_forecast_high_temp_4: sensor.dark_sky_daytime_high_temperature_4
+        entity_forecast_high_temp_5: sensor.dark_sky_daytime_high_temperature_5
+        entity_forecast_low_temp_1: sensor.dark_sky_overnight_low_temperature_1
+        entity_forecast_low_temp_2: sensor.dark_sky_overnight_low_temperature_2
+        entity_forecast_low_temp_3: sensor.dark_sky_overnight_low_temperature_3
+        entity_forecast_low_temp_4: sensor.dark_sky_overnight_low_temperature_4
+        entity_forecast_low_temp_5: sensor.dark_sky_overnight_low_temperature_5
+        entity_forecast_icon_1: sensor.dark_sky_icon_1
+        entity_forecast_icon_2: sensor.dark_sky_icon_2
+        entity_forecast_icon_3: sensor.dark_sky_icon_3
+        entity_forecast_icon_4: sensor.dark_sky_icon_4
+        entity_forecast_icon_5: sensor.dark_sky_icon_5
+
+
+      - id: 6e5a07e6401841cebba032c398bd9b54  # Automatically created id
+        type: iframe
+        url: https://www.windy.com/-Temperature-temp?temp,44.675,-63.556,9,m:eTCaepf,p:off
+        aspect_ratio: 100%
+      - id: 0ee32ad98c1e48e3992ceb9758c2b22e  # Automatically created id
+        type: iframe
+        url: https://www.novascotiawebcams.com/en/webcams/halifax-waterfront/
+        aspect_ratio: 100%
+
+#####################################################################################################
+#                                                                                                   #
+#                       media page                                                                  #
+#                                                                                                   #
+#####################################################################################################
+
+  - id: 3  # Automatically created id
+    title: Media
+    icon: mdi:play-circle-outline
+    cards:
+
+      - id: 9323758951fb4d0085f7fca1b8893d5d  # Automatically created id
+        type: custom:mini-media-player
+        entity: media_player.dining_room
+        icon: mdi:router-wireless
+        artwork: full-cover
+        artwork_border: true
+        show_source: true
+
+      - id: 97152fe82cef47a3be3b67b36d789c66  # Automatically created id
+        type: custom:mini-media-player
+        entity: media_player.spotify
+        name: Spotify Player
+        artwork: cover
+        power_color: true
+        hide_volume: true
+        show_progress: true
+
+      - id: c60fad45699346cc9546804250bb4ade  # Automatically created id
+        type: entities
+        title: Media Players
+        entities:
+          - entity: media_player.spotify
+            type: custom:mini-media-player
+            group: true
+            show_progress: true
+          - entity: media_player.dining_room_mini
+            type: custom:mini-media-player
+            hide_controls: true
+            show_tts: google
+            group: true
+          - entity: media_player.living_room_tv
+            type: custom:mini-media-player
+            hide_controls: true
+            group: true
+          - entity: media_player.family_room_tv
+            type: custom:mini-media-player
+            hide_controls: true
+            group: true
+          - entity: media_player.living_room
+            type: custom:mini-media-player
+            show_progress: true
+            power_color: true
+#          artwork: cover
+            group: true
+            show_shuffle: true
+            show_source: true
+          - entity: media_player.dining_room
+            type: custom:mini-media-player
+            show_progress: true
+            power_color: true
+#          artwork: cover
+            group: true
+            show_shuffle: true
+            show_source: true
+#####################################################################################################
+#                                                                                                   #
+#                     Family                                                                        #
+#                                                                                                   #
+#####################################################################################################
+
+  - id: 4  # Automatically created id
+    title: Family
+    icon: mdi:account-multiple
+    cards:
+      - id: 4100944ece1845a2865c2991c05b2447  # Automatically created id
+        type: entities
+        entities:
+          - device_tracker.life360_trevor
+          - device_tracker.life360_corynne
+
+      - id: e3c8e19e132647989868eb17b7cb8430  # Automatically created id
+        type: map
+        entities:
+          - entity: device_tracker.life360_trevor
+          - entity: device_tracker.life360_corynne
+          - zone.home
+          - zone.work
+          - zone.work2
+        aspect_ratio: 50%
+
+
+      - id: 2ac0cb72741947888cf30a1fbc53d8ad  # Automatically created id
+        type: picture-elements
+        image: /local/firstfloor.png
+        title: Main Floor
+        elements:
+          - type: service-button
+            title: Lights Off
+            style:
+              top: 97%
+              left: 90%
+              padding: 0px
+            service: light.turn_off
+            service_data:
+              entity_id: group.all_lights
+          - type: icon
+            icon: mdi:cctv
+            entity: camera.demo_camera
+            style:
+              top: 12%
+              left: 6%
+              transform: rotate(-60deg) scaleX(-1)
+              --iron-icon-height: 30px
+              --iron-icon-width: 30px
+              --iron-icon-stroke-color: black
+              --iron-icon-fill-color: rgba(50, 50, 50, .75)
+          - type: image
+            entity: light.piano_lamp
+            tap_action: toggle
+            image: /local/icons/light_bulb_off.png
+            state_image:
+              'on': /local/icons/light_bulb_on.png
+            state_filter:
+              'on': brightness(130%) saturate(1.5) drop-shadow(0px 0px 10px gold)
+              'off': brightness(80%) saturate(0.8)
+            style:
+              top: 35%
+              left: 65%
+              width: 7%
+              padding: 50px 50px 100px 50px
+
+      - id: d3c4be6d7d484a208969dc9063fa5c0d  # Automatically created id
+        type: iframe
+        url: http://192.168.2.34:1880/worldmap
+
+######################################################################################################
+#                                                                                                    #
+#       Camera/home security                                                                         #
+#                                                                                                    #
+######################################################################################################
+  - id: 5  # Automatically created id
+    title: Cameras
+    icon: mdi:cctv
+    cards:
+
+#### Internal Cameras only shown if nobody (just me for now) is home, privacy y'all.
+      - id: 5b27e5e67f8e4b7282a9eeee908c534a  # Automatically created id
+        type: conditional
+        conditions:
+          - entity: device_tracker.google_maps_105086289130573705851
+            state_not: "home"
+        card:
+          type: picture-entity
+          title: IP Webcam
+          entity: camera.ip_webcam
+          camera_image: camera.ip_webcam
+          show_info: true
+          tap_action: dialog
+
+      - id: b05851f1ce5b48a18b38f77c7c577f78  # Automatically created id
+        type: conditional
+        conditions:
+          - entity: device_tracker.google_maps_105086289130573705851
+            state_not: "home"
+        card:
+          type: picture-entity
+          title: FamilyRoomPi Camera
+          entity: camera.familyroompi_camera
+          camera_image: camera.familyroompi_camera
+          show_info: true
+          tap_action: dialog
+
+####################################################################################################
+#                                                                                                  #
+#    Sureveillance lovelace card page, dupe of prev                                                #
+#                                                                                                  #
+####################################################################################################
+
+  - id: 6  # Automatically created id
+    title: Surveillance
+    icon: mdi:cctv
+    panel: true
+    cards:
+      - id: f97e68ec473c40e2a61ccdf06b71e079  # Automatically created id
+        type: custom:surveillance-card
+        thumb_interval: 15
+        update_interval: 2
+        cameras:
+          - entity: camera.familyroompi_camera
+            motion_entity: binary_sensor.front_porch_motion
+          - entity: camera.ip_webcam
+            motion_entity: binary_sensor.back_yard_motion
+
+###################################################################################################
+#                                                                                                 #
+# Settings page - under the hood, not usable                                                      #
+#                                                                                                 #
+###################################################################################################
+
+  - id: 7  # Automatically created id
+    title: Settings
+    icon: mdi:settings
+    # Variant: icon: mdi:laptop-mac
+    cards:
+      - id: 0c54f69216f3451a813ec55f3fb71b2f  # Automatically created id
+        type: vertical-stack
+        cards:
+          - type: markdown
+            title: Network Status
+            content: " "
+          - type: horizontal-stack
+            cards:
+              - type: "custom:mini-graph-card"
+                entity: sensor.speedtest_download
+                name: Download
+                line_color: '#03a9f4'
+                line_width: 8
+ #               accuracy: 30
+                hours_to_show: 24
+              - type: "custom:mini-graph-card"
+                entity: sensor.speedtest_upload
+                name: Upload
+                line_color: '#03a9f4'
+                line_width: 8
+#                accuracy: 30
+                hours_to_show: 24
+
+      - id: 44a9ef5b0e5c482f9ade39596f2c240e  # Automatically created id
+        type: custom:tracker-card
+        title: Custom Card Tracker
+        trackers:
+          - sensor.custom_card_tracker
+          - sensor.custom_component_tracker
+
+      - id: 89f669ce46cd4f5a86c42b03347f0bfd  # Automatically created id
+        type: entities
+        title: Automations
+        entities:
+          - group.automation_enable
+          - group.automation_disable
+          - group.all_automations
+      - id: f74d9bb7c4a6459284099ca8ebc67641  # Automatically created id
+        type: entities
+        title: Scripts
+        entities:
+          - script.restart_hass
+          - script.turn_on_netflix
+          - script.spotify_music
+          - group.all_scripts
+
+      - id: bc6180ebedd44eb982103f8ea5418abf  # Automatically created id
+        type: entities
+        title: Input Booleans
+        entities:
+          - input_boolean.vacation_mode
+          - input_boolean.speech_notifications
+          - input_boolean.tv_time
+          - input_boolean.flash
+          - input_boolean.good_morning
+          - input_boolean.guard_dog
+          - input_boolean.text_notifications
+          - input_boolean.alert_mode
+          - input_boolean.school_mode
+
+      - id: 7a6a35d5175d423ea92bbefab93325af  # Automatically created id
+        type: entities
+        title: Tests
+        entities:
+          - input_boolean.test_audio_notification
+          - input_boolean.test_text_notification
+          - input_boolean.test_webostv_notification
+          
+#      - id: 796a45d5175d433ea92bbefab86325af  # Automatically created id
+ #       type: glance
+#        title: Speedtest
+#        show_header_toggle: true
+#        entities:
+#          - sensor.speedtest_ping
+ #         - sensor.speedtest_download
+ #         - sensor.speedtest_upload
+
+      - id: 658e4e1ead514d24997a60047e45f034  # Automatically created id
+        type: glance
+        title: Pwnd
+        show_header_toggle: true
+        entities:
+          - sensor.breaches_trevor_macinnisflyportercom
+          - sensor.breaches_trevmacinnisgmailcom
+          - sensor.breaches_corynneyhotmailcom
+      - id: 7ac82c7924fe4b9ba5c92293e14daf48  # Automatically created id
+        type: glance
+        title: HApi
+        show_header_toggle: true
+        entities:
+          - sensor.disk_use_percent_home
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+          - sensor.memory_free
+          - sensor.since_last_boot
+      - id: 5c490f626a8946619bf19cdd43a481ee  # Automatically created id
+        type: glance
+        title: Batteries
+        show_header_toggle: true
+        entities:
+          - sensor.battery_s8
+      - id: f53ed6aa2c174d6089463afecc21d917  # Automatically created id
+        type: entities
+        title: Troubleshooting
+        show_header_toggle: true
+        entities:
+          - group.all_devices
+          - group.all_input_boolean
+          - group.all_lights
+          - group.all_switches
+          - group.all_remotes
+#          - group.all_automations
+          - group.all_scripts
+      - id: 67cacd94021c43e399986678859f6f90  # Automatically created id
+        type: entities
+        title: Online/Offline
+        show_header_toggle: true
+        entities:
+          - group.all_devices
+          - binary_sensor.google_mini2
+          - binary_sensor.s8
+          - binary_sensor.dot
+          - binary_sensor.google_mini
+          - binary_sensor.laptop
+          - binary_sensor.pivpn
+          - binary_sensor.firehd8
+          - binary_sensor.familyroompi
+##### Weblinks
+
+      - id: e673a008fd7648b3a6b0ab05dee6a00b  # Automatically created id
+        type: entities
+        title: Developer Tools
+        show_header_toggle: false
+        entities:
+          - script.restart_hass
+#          - sensor.current_version
+#          - sensor.ha_online_version
+#          - switch.debug_view
+          - sensor.home_assistant_up_time
+          - sensor.last_boot
+          - sensor.since_last_boot
+          - type: weblink
+            name: Github
+            url: https://github.com/HalEEfacts/SmartHome
+          - type: weblink
+            name: Router
+            url: http://192.168.2.1/
+            icon: mdi:router-wireless
+          ### These next three weblinks don't work  ###
+          - type: weblink
+            name: Configure Alexa
+            url: https://alexa.amazon.com/spa/index.html#smart-home
+          - type: weblink
+            name: 'Nabu Casa (HA Cloud Acct)'
+            url: https://account.nabucasa.com
+          - type: weblink
+            name: Sonos App (Android)
+            url: intent://sonos/#Intent;launchFlags=0x10000000;component=com.sonos.acr/.SonosLaunchActivity;end
+            icon: mdi:speaker
+
+
+##################################################################################################
+#                                                                                                #
+#                          Test page for custom cards                                            #
+#                                                                                                #
+##################################################################################################
+  - id: 8  # Automatically created id
+    title: Testting
+    icon: mdi:settings
+    background: center / cover no-repeat url("/local/lovelace/back.png") fixed
+    cards:
+      - id: 39eb9ad1144544e1a3ce64e4c26fbf11  # Automatically created id
+        type: custom:circle-sensor-card
+        entity: sensor.dark_sky_humidity
+        max: 120
+        min: 30
+        stroke_width: 10
+        gradient: true
+        units: ' '
+        attribute: 'ambient'
+        attribute_max: 'feels_like'
+        show_max: true
+        font_style:
+          color: red
+          font-size: 1.5em
+          text-shadow: '2px 2px black'
+          font-family: 'Trebuchet MS'
+        color_stops:
+          50: '#55FF55'
+          75: '#5555FF'
+          100: '#FF5555'
+        style:
+          top: 50%
+          left: 50%
+          width: 75px
+          height: 75px
+
+      - id: 508cede3abdb4224882a03c5128c94f4  # Automatically created id
+        type: custom:card-modder
+        style:
+          --paper-card-background-color: rgba(0, 100, 0, 0.2)
+          --paper-item-icon-color: white
+          border-radius: 5px
+          color: rgb(0, 0, 100)
+        card:
+          type: glance
+          title: Styled card
+          entities:
+            - light.piano_lamp
+            - switch.wemo_switch
+            - group.home_spotify_player
+### Vertical stack of Curved, shadowed simple cards
+
+      - id: 39113517a5664586a9b7fccf9c1b5390  # Automatically created id
+        type: vertical-stack
+        cards:
+          - type: custom:card-modder
+            style:
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entities
+              title: Living Room
+              entities:
+                - light.piano_lamp
+                - switch.wemo_switch
+          - type: custom:card-modder
+            style:
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entities
+              title: Family Room
+              entities:
+                - light.small_lamp
+          - type: custom:card-modder
+            style:
+              border-radius: 20px
+              border: solid 1px rgba(100,100,100,0.3)
+              box-shadow: 3px 3px rgba(0,0,0,0.4)
+            card:
+              type: entities
+              title: Bedroom
+              entities:
+                - light.bedroom
+                - input_number.blanketminutes
+                - switch.012004762c3ae840b45c
+
+      - id: ffacd1c549f740fc801a4438338bd2ba  # Automatically created id
+        type: custom:card-modder
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 400px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          color: "#999999"
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+        card:
+          type: glance
+          title: Back image
+          entities:
+            - light.piano_lamp
+            - switch.wemo_switch
+
+      - id: 9076797f5e314083b6a08d9fd4834c39  # Automatically created id
+        type: custom:card-modder
+        card:
+          type: entities
+          title: Lights
+          show_header_toggle: false
+          entities:
+            - entity: group.livingroomlights
+            - type: divider
+              style:
+                height: 20px
+                margin: 4px 0
+                background: center / contain url("/local/lovelace/divider.png") no-repeat
+            - entity: group.familyroomlights
+            - type: divider
+              style:
+                height: 20px
+                margin: 4px 0
+                background: center / contain url("/local/lovelace/divider.png") no-repeat
+            - entity: group.bedroomlights
+            - type: divider
+              style:
+                height: 20px
+                margin: 4px 0
+                background: center / contain url("/local/lovelace/divider.png") no-repeat
+          style:
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          color: "#999999"
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - id: 37c3764f81354670b6782eac508b89f3  # Automatically created id
+        type: custom:card-modder
+        card:
+          type: entities
+          title: Media Players
+          show_header_toggle: false
+          entities:
+            - entity: media_player.living_room
+              type: custom:mini-media-player
+              show_progress: true
+              power_color: true
+#             artwork: cover
+              group: true
+              show_shuffle: true
+              show_source: true
+            - entity: media_player.dining_room
+              type: custom:mini-media-player
+              show_progress: true
+              power_color: true
+#             artwork: cover
+              group: true
+              show_shuffle: true
+              show_source: true
+            - entity: media_player.dining_room_mini
+              type: custom:mini-media-player
+              hide_controls: true
+              show_tts: google
+              group: true
+            - entity: media_player.living_room_tv
+              type: custom:mini-media-player
+              hide_controls: true
+              group: true
+            - entity: media_player.family_room_tv
+              type: custom:mini-media-player
+              hide_controls: true
+              group: true
+            - entity: media_player.spotify
+              type: custom:mini-media-player
+              group: true
+              show_progress: true
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.7)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          color: "#999999"
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+      - id: cdafb642f4804c27b9028e687ce869de  # Automatically created id
+        type: custom:card-modder
+        card:
+          type: entities
+          title: KITCHEN
+          show_header_toggle: false
+          entities:
+            - entity: light.piano_lamp
+              type: custom:slider-entity-row
+              secondary_info: last-changed
+              group: true
+#           - entity: light.kitchen_lightstrip
+#             type: custom:slider-entity-row 
+#             group: true
+            - type: divider
+              style:
+                height: 20px
+                margin: 4px 0
+                background: center / contain url("/local//lovelace/divider.png") no-repeat
+            - switch.wemo_switch
+        style:
+          background-image: url("/local/lovelace/cardbackK.png")
+          background-repeat: no-repeat
+          background-color: rgba(50,50,50,0.3)
+          background-size: 100% 68px
+          border-radius: 20px
+          border: solid 1px rgba(100,100,100,0.3)
+          color: "#999999"
+          box-shadow: 3px 3px rgba(0,0,0,0.4)
+
+#### Folding Items
+
+      - id: 2a31389fc0ae426f9401dfe9e5eda62a  # Automatically created id
+        type: entities
+        title: Folding entities
+        entities:
+          - light.piano_lamp
+          - type: custom:fold-entity-row
+            head: sensor.yr_symbol
+            items:
+              - sensor.dark_sky_daytime_high_apparent_temperature
+              - sensor.dark_sky_pressure
+          - switch.wemo_switch
+          - type: custom:fold-entity-row
+            head:
+              type: section
+              label: Lights
+            group_config:
+              secondary_info: last-changed
+            items:
+              - light.bedroom
+              - light.small_lamp
+              - light.piano_lamp
+
+####################################
+#     Folding Groups               #
+####################################
+
+      - id: a7b8433012cf47e2934ec9b1c7a8f162  # Automatically created id
+        type: entities
+        title: Lights
+        entities:
+          - type: custom:fold-entity-row
+            head: group.livingroomlights
+          - type: custom:fold-entity-row
+            head: group.familyroomlights
+          - type: custom:fold-entity-row
+            head: group.bedroomlights
+
+      - id: ca0d1c2bac1745e98bfbdf64debe3489  # Automatically created id
+        type: entities
+        entities:
+          - entity: media_player.spotify
+            name: Skip, no pause
+          - entity: input_select.spotify_source
+          - entity: input_number.spotify_volume
+          - entity: sensor.spotify_volume
+          - entity: sensor.spotify_shuffle
+          - entity: sensor.spotify_source
+          - entity: script.spotify_music
+          - entity: group.home_spotify_controls
+          - entity: group.home_spotify_player
+#######################################################################################################
+#                                                                                                     #
+#    Floorplan card only page                                                                         #
+#                                                                                                     #
+#######################################################################################################
+
+  - id: 9  # Automatically created id
+    title: Floorplan
+    icon: mdi:settings
+    panel: true
+    background: center / cover no-repeat url("/local/lovelace/back.png") fixed
+    cards:
+      - id: 8c6f7b160bc742f49488be90a78de289  # Automatically created id
+        type: picture-elements
+        image: /local/floorplan/backgroundfloortab.svg
+        elements:
+ ### DATE AND TIME
+          - type: state-label
+            entity: sensor.local_time
+            style:
+              top: 8%
+              left: 2%
+              width: 2.5%
+              font-size: 2.8em
+              color: rgba(202,217,235,1)
+          - type: state-label
+            entity: sensor.local_date
+            style:
+              top: 11%
+              left: 82.5%
+              width: 300px
+              text-align: right
+              font-size: 1.5em
+              text-transform: uppercase
+              color: rgba(202,217,235,.75)
+
+        ### WEATHER BOX
+          - type: state-label
+            entity: sensor.dark_sky_temperature
+#            suffix: °C
+            style:
+              top: 9%
+              left: 35.5%
+              width: 150px
+              text-align: left
+              font-size: 2.8em
+              color: rgba(202,217,235,1)
+              font-weight: bold
+
+          - type: state-label
+            entity: sensor.dark_sky_overnight_low_temperature
+            style:
+              top: 10.5%
+              left: 39.5%
+              width: 40px
+              text-align: left
+              font-size: 1.3em
+              color: rgba(164,196,233,1)
+
+          - type: state-label
+            entity: sensor.dark_sky_daytime_high_temperature
+            style:
+              top: 7.7%
+              left: 39.5%
+              width: 40px
+              text-align: left
+              font-size: 1.3em
+              color: rgba(245,166,35,.55)
+
+          - type: state-label
+            entity: sensor.dark_sky_hourly_summary
+            style:
+              top: 13.4%
+              left: 45.5%
+              width: 350px
+              text-align: left
+              font-style: italic
+              font-size: 1em
+              overflow: hidden
+              color: rgba(202,217,235,1)
+
+        # dark sky will return the following "icon states" that need to be mapped using state-image
+        # clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
+          - type: image
+            entity: sensor.dark_sky_icon
+            image: /local/assets/weather/weather_cloudy.png
+            state_image:
+              "clear-day": /local/icons/weather_icons/animated/day.svg
+              "clear-night": /local/icons/weather_icons/animated/night.svg
+              "rain": /local/icons/weather_icons/animated/rainy-4.svg
+              "snow": /local/icons/weather_icons/animated/snowy-1.svg
+              "sleet": /local/icons/weather_icons/animated/snowy-1.svg
+              "wind": /local/icons/weather_icons/animated/weather-sagittarius.svg
+              "fog": /local/assets/weather/weather_fog.png
+              "partly-cloudy-day": /local/icons/weather_icons/animated/coudy-day-1.svg
+              "partly-cloudy-night": /local/icons/weather_icons/animated/cloudy-night-1.svg
+            style:
+              top: 10%
+              left: 24%
+              width: 70px
+              font-size: 70px
+              color: rgba(202,217,235,.75)
+
+
+          - type: service-button
+            title: Lights Off
+            style:
+              top: 97%
+              left: 90%
+              padding: 0px
+            service: light.turn_off
+            service_data:
+              entity_id: group.all_lights
+          - type: image
+            entity: light.piano_lamp
+            tap_action: toggle
+            image: /local/icons/component_icons/lightbulb_off.svg
+            state_image:
+              'on': /local/icons/component_icons/lightbulb_on.svg
+            state_filter:
+              'on': brightness(130%) saturate(1.5) drop-shadow(0px 0px 10px gold)
+              'off': brightness(80%) saturate(0.8)
+            style:
+              top: 70%
+              left: 50%
+              width: 3%
+              padding: 50px 50px 100px 50px
+
+
+
+### LEFT BUTTON CLUSTER
+#          - type: image
+#            entity: lock.front_door
+#            tap_action: toggle
+#            image: /local/assets/button_status.png
+#            state_image:
+#              "locked": /local/assets/button_status_on.png
+#            style:
+#              top: 37.9%
+#              left: 12.6%
+#              width: 25%
+
+#######################################################################################################
+#                                                                                                     #
+#      Alarm Clock Page                                                                               #
+#                                                                                                     #
+#######################################################################################################
+
+  - id: 10  # Automatically created id
+    title: Clock
+    icon: mdi:clock-outline
+    panel: true
+    cards:
+      - id: d4906d6984d34a8d910ed48cd39895c9  # Automatically created id
+        type: picture-elements
+        image: /local/lovelace/backgroundsprite.jpg
+        elements:
+          - type: state-label
+            entity: sensor.dark_sky_hourly_summary
+            tap_action: none
+            style:
+              top: 96%
+              left: 72%
+              font-size: 1.2em
+              width: 500px
+              text-align: right
+              color: rgba(202,217,235,.25)
+              font-style: italic
+
+
+          - type: state-label
+            entity: sensor.weather_current_temp
+            suffix: °C
+            tap_action: none
+            style:
+              top: 90.8%
+              left: 80%
+              width: 150px
+              text-align: right
+              font-size: 2.8em
+              color: rgba(202,217,235,.15)
+
+        # dark sky will return the following "icon states" that need to be mapped using state-image
+        # clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, or partly-cloudy-night
+          - type: image
+            entity: sensor.dark_sky_icon
+            tap_action: none
+            image: /local/assets/weather/weather_cloudy.png
+            state_image:
+              "clear-day": /local/icons/weather_icons/animated/day.svg
+              "clear-night": /local/icons/weather_icons/animated/night.svg
+              "rain": /local/icons/weather_icons/animated/rainy-4.svg
+              "snow": /local/icons/weather_icons/animated/snowy-1.svg
+              "sleet": /local/icons/weather_icons/animated/snowy-1.svg
+              "wind": /local/icons/weather_icons/animated/weather-sagittarius.svg
+              "fog": /local/assets/weather/weather_fog.png
+              "partly-cloudy-day": /local/icons/weather_icons/animated/coudy-day-1.svg
+              "partly-cloudy-night": /local/icons/weather_icons/animated/cloudy-night-1.svg
+            style:
+              top: 90%
+              left: 94%
+              width: 49px
+              opacity: .1
+
+
+          - type: state-label
+            entity: sensor.master_bedroom_temperature
+            tap_action: none
+            style:
+              top: 75%
+              left: 50%
+              font-size: 2.8em
+              color: rgba(202,217,235,.25)
+
+
+          - type: state-label
+            entity: sensor.weather_overnight_low
+            style:
+              top: 92.5%
+              left: 89%
+              width: 40px
+              text-align: left
+              font-size: 1.3em
+              color: rgba(164,196,233,.5)
+
+          - type: state-label
+            entity: sensor.weather_daytime_high
+            style:
+              top: 89.5%
+              left: 89%
+              width: 40px
+              text-align: left
+              font-size: 1.3em
+              color: rgba(245,166,35,.25)
+
+
+
+          - type: state-label
+            entity: sensor.local_time
+            tap_action: none
+            style:
+              top: 30%
+              left: 50%
+              font-size: 15em
+              font-weight: 100
+              color: rgba(202,217,235,.75)
+
+          - type: state-label
+            entity: sensor.local_date
+            tap_action: none
+            style:
+              top: 59%
+              left: 50%
+              font-size: 2em
+              text-transform: uppercase
+              letter-spacing: 10px
+              color: rgba(202,217,235,.5)

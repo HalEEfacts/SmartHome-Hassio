@@ -1,0 +1,279 @@
+# Spotify drawn from https://community.home-assistant.io/t/spotify-playlist-player/22491/68
+
+homeassistant:
+  customize:
+    media_player.spotify:
+      friendly_name: Spotify
+    media_player.dining_room:
+      friendly_name: Dining Room Sonos
+    media_player.living_room:
+      friendly_name: Living Room Sonos
+    media_player.dining_room_mini:
+      friendly_name: Google Mini
+    media_player.living_room_tv:
+      friendly_name: Living Room Chromecast
+    media_player.family_room_tv:
+      friendly_name: Family Room Chromecast
+    media_player.living_room_tv_2:
+      friendly_name: Living Room TV
+    media_player.livingroom_dashboard:
+      friendly_name: Nexus_7
+    script.spotify_music:
+      friendly_name: 'Play Spotify'
+      icon: mdi:play
+      
+wake_on_lan:
+
+media_player:
+  - platform: floorplan_speaker
+    name: livingroom_dashboard
+  - platform: webostv
+    host: !secret webostv_host
+    name: Living Room TV
+    timeout: 5
+    customize:
+      sources:
+        - Live TV
+        - Plex
+        - Netflix
+        - YouTube
+        - LG Content Store
+        - Web Browser
+        - TV Guide
+        - TV Scheduler
+        - HDMI 2
+        - HDMI 4
+    turn_on_action:
+        service: wake_on_lan.send_magic_packet
+        data:
+          mac: !secret webostv_mac
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
+
+
+################################################################################
+# Sensor
+################################################################################
+sensor:
+  - platform: template
+    sensors:
+      living_room_tv_source:
+        value_template: "{{ states.media_player.living_room_tv_2.attributes.source }}"
+  - platform: template
+    sensors:
+      spotify_volume:
+        friendly_name: "Spotify Volume"
+        value_template: "{{ states.media_player.spotify.attributes.volume_level }}"
+  - platform: template
+    sensors:
+      spotify_shuffle:
+        friendly_name: "Spotify Shuffle"
+        value_template: "{{ states.media_player.spotify.attributes.shuffle }}"
+  - platform: template
+    sensors:
+      spotify_source:
+        friendly_name: "Spotify Source"
+        value_template: "{{ states.media_player.spotify.attributes.source }}"
+
+  - platform: history_stats
+    name: Total TV Time
+    entity_id: media_player.living_room_tv_2
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+################################################################################
+# Input_....
+################################################################################
+input_number:
+  spotify_volume:
+    name: Volume
+    icon: mdi:volume-high
+    initial: 100
+    min: 0
+    max: 100
+    step: 1
+
+input_select:
+  spotify_playlist:
+    name: 'Playlist:'
+    options:
+      - Made In Germany
+      - Murmel
+      - Chillige Bässe
+      - Chillstep
+      - Mixed Hip Hop
+      - Mixed Electro
+      - Mixed Rock
+      - Mixed Dub
+      - Good Feeling
+      - Nightair
+      - Streetbangers
+    icon: mdi:spotify
+  spotify_source:
+    name: 'Source:'
+    options:
+      - Trevor's Echo Dot
+      - Galaxy S8+
+      - Google Mini
+    initial: Google Mini
+    icon: mdi:speaker-wireless
+
+input_boolean:
+  spotify_shuffle:
+    name: Shuffle
+    icon: mdi:shuffle-variant
+
+################################################################################
+#Group
+################################################################################
+group:
+  media_dining_room:
+    name: Media Dining Room
+    entities:
+      - media_player.dining_room
+  media_living_room:
+    name: Media Living Room
+    entities:
+      - media_player.living_room
+  media_living_room_tv_2:
+    name: Media Living Room TV
+    entities:
+      - media_player.living_room_tv_2
+  media_family_room_tv:
+    name: Media Family Room TV
+    entities:
+      - media_player.family_room_tv
+  home_spotify_player:
+    name: Spotify Player
+    entities:
+      - media_player.spotify
+  home_spotify_controls:
+    name: Spotify Controls
+    control: hidden
+    entities:
+      - input_select.spotify_playlist
+      - input_select.spotify_source
+      - script.spotify_music
+      - input_number.spotify_volume
+      - input_boolean.spotify_shuffle
+
+#################################################################################################
+# Scripts
+#################################################################################################
+
+script:
+  turn_on_netflix:
+    alias: "Start Netflix"
+    sequence:
+      - service: media_player.turn_on
+        entity_id: media_player.living_room_tv_2
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.living_room_tv_2
+          source: 'Netflix'
+
+  spotify_music:
+    alias: "Play selected spotify playlist"
+    sequence:
+      - service: media_player.select_source
+        data_template: 
+          entity_id: media_player.spotify
+          source: >
+            {% if is_state("input_select.spotify_source", "Trevor's Echo Dot") %} Trevor's Echo Dot
+            {% elif is_state("input_select.spotify_source", "Galaxy S8+") %} Galaxy S8+
+            {% elif is_state("input_select.spotify_source", "Google Mini") %} Google Mini
+            {% endif %}
+      - service: media_player.play_media
+        data_template:
+          entity_id: media_player.spotify
+          media_content_type: playlist
+          media_content_id: >
+            {% if is_state("input_select.spotify_playlist", "Made In Germany") %} spotify:user:playlists.germany:playlist:5M7jfvXr6fiQ21U8jfe9aE
+            {% elif is_state("input_select.spotify_playlist", "Murmel") %} spotify:user:1143893613:playlist:5dfbLgeesT8gixq1GTWBoU
+            {% elif is_state("input_select.spotify_playlist", "Chillige Bässe") %} spotify:user:spotify:playlist:37i9dQZF1DX37cXruBmbRS
+            {% elif is_state("input_select.spotify_playlist", "Chillstep") %} spotify:user:kent1337:playlist:6IjDl5eRczFdgZkKYXhuHZ
+            {% elif is_state("input_select.spotify_playlist", "Mixed Hip Hop") %} spotify:user:1143893613:playlist:4yuXhTpPFSTnRSYmAN8mse
+            {% elif is_state("input_select.spotify_playlist", "Mixed Electro") %} spotify:user:1143893613:playlist:1grR3x1MSPlyfS6VsaSzPn
+            {% elif is_state("input_select.spotify_playlist", "Mixed Rock") %} spotify:user:1143893613:playlist:2ECMyR5ovezJBGQDnL3w23
+            {% elif is_state("input_select.spotify_playlist", "Mixed Dub") %} spotify:user:1143893613:playlist:093q3iMD3lAA4h5oatDJPh
+            {% elif is_state("input_select.spotify_playlist", "Good Feeling") %} spotify:user:1143893613:playlist:0rHdZMqeSR4XVvPf6QmFM4
+            {% elif is_state("input_select.spotify_playlist", "Nightair") %} spotify:user:1143893613:playlist:2C4xXSYKJp0CYwIyWhODpD
+            {% elif is_state("input_select.spotify_playlist", "Streetbangers") %} spotify:user:1143893613:playlist:1JzR2qe9P3EOjgSyVNJ80R
+            {% endif %}
+
+################################################################################
+#Automations
+################################################################################
+automation:
+
+  - alias: 'Spotify Volume (Set)'
+    trigger:
+      platform: state
+      entity_id: input_number.spotify_volume
+    action:
+      service: media_player.volume_set
+      data_template:
+        entity_id: media_player.spotify
+        volume_level: '{{  states.input_number.spotify_volume.state | int / 100  }}'
+  
+  - alias: 'Spotify Volume (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_volume
+    action:
+      - delay:
+          seconds: 5
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.spotify_volume
+          value: '{{  states.sensor.spotify_volume.state | float | round(2) * 100  }}'
+  
+  - alias: 'Spotify Shuffle (Set)'
+    trigger:
+      platform: state
+      entity_id: input_boolean.spotify_shuffle
+    action:
+      service: media_player.shuffle_set
+      data_template:
+        entity_id: media_player.spotify
+        shuffle: >
+          {% if is_state('input_boolean.spotify_shuffle', 'off') %} 
+          false
+          {% elif is_state('input_boolean.spotify_shuffle', 'on') %}
+          true
+          {% endif %}
+  
+  - alias: 'Spotify Shuffle (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_shuffle
+    action:
+      - delay:
+          seconds: 5
+      - service_template: >
+          {% if states.sensor.spotify_shuffle.state == 'False' %}
+            input_boolean.turn_off
+          {% else %}
+            input_boolean.turn_on
+          {% endif %}
+        data:
+          entity_id: input_boolean.spotify_shuffle
+
+  - alias: 'Spotify Source (Sync)'
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: state
+        entity_id: sensor.spotify_source
+    action:
+      service: input_select.select_option
+      entity_id: input_select.spotify_source
+      data_template:
+        option: '{{  states.sensor.spotify_source.state  }}'

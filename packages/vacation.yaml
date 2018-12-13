@@ -1,0 +1,60 @@
+###############################################################################
+#   @author         :   HalEEfacts
+#   @date           :   08/12/2018
+#   @package        :   
+#   @description    :   
+#   @url            :   
+###############################################################################
+homeassistant:
+  customize:
+
+group:
+
+input_number:
+
+input_select:
+
+sensor:
+
+###############################################################################
+#                               Automations
+###############################################################################
+automation:
+
+        ##########################################################
+        ## Vacation Mode Lights on at 6p
+        ##########################################################
+
+  - alias: Vacation - Lights On 5p
+
+    trigger:
+      - platform: time
+        at: '17:01'
+
+    condition:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'on'
+
+    action:
+      - service: light.turn_on
+        entity_id: group.livingroomlights
+
+        ##########################################################
+        ## Vacation Mode Lights Off at 11p
+        ##########################################################
+
+  - alias: Vacation - Lights Off 11p
+
+    trigger:
+      - platform: time
+        at: '23:34'
+
+    condition:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'on'
+
+    action:
+      - service: light.turn_off
+        entity_id: group.livingroomlights

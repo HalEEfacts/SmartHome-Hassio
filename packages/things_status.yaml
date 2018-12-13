@@ -1,0 +1,220 @@
+# Sensors and info related to Hardware
+
+################################################################################
+#Customize
+################################################################################
+
+homeassistant:
+  customize:
+    sensor.speedtest_ping:
+      friendly_name: Ping
+    sensor.speedtest_download:
+      friendly_name: Download
+      icon: mdi:arrow-down-bold
+    sensor.speedtest_upload:
+      friendly_name: Upload
+      icon: mdi:arrow-up-bold
+    sensor.breaches_trevmacinnisgmailcom:
+      friendly_name: T Home
+    sensor.breaches_trevor_macinnisflyportercom:
+      friendly_name: T Work
+    sensor.breaches_corynneyhotmailcom:
+      friendly_name: C Home
+    sensor.disk_use_percent_home:
+      friendly_name: disk used (%)
+    sensor.load_1m:
+      friendly_name: 1m
+    sensor.load_5m:
+      friendly_name: 5m
+    sensor.load_15m:
+      friendly_name: 15m
+    sensor.memory_free:
+      friendly_name: Memory Free
+    sensor.since_last_boot:
+      friendly_name: Last Boot
+    switch.012004762c3ae840b45c:
+      friendly_name: Piano Lamp Switch
+#################################################################
+#Group
+#################################################################
+group:
+
+  Device:
+    view: yes
+    icon: mdi:laptop-mac
+    name: Devices
+    entities:
+      - group.speedtest
+      - group.pwnd
+      - group.hapi
+      - group.batteries
+
+  Batteries:
+    entities:
+      - sensor.s8_battery
+
+  Speedtest:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+  Pwnd:
+    - sensor.breaches_trevmacinnisgmailcom
+    - sensor.breaches_trevor_macinnisflyportercom
+    - sensor.breaches_corynneyhotmailcom
+    
+  HApi:
+    - sensor.disk_use_percent_home
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.load_15m
+    - sensor.memory_free
+    - sensor.since_last_boot
+
+################################################################
+sensor:
+  - platform: cpuspeed
+  - platform: pi_hole
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: disk_free
+      - type: memory_free
+      - type: processor_use
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: last_boot
+      - type: since_last_boot
+  - platform: haveibeenpwned
+    email: 
+      - !secret pwnd_t_home
+      - !secret pwnd_t_work
+      - !secret pwnd_c_home
+  - platform: statistics
+    entity_id: sensor.cpu
+  - platform: speedtest
+    minute:
+      - 0
+      - 15
+      - 30
+      - 45
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+  - platform: uptime
+    name: Home Assistant Up Time
+    unit_of_measurement: hours
+
+###################################################################
+#
+#       Device Tracker
+#
+###############################################################
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts:
+      - 192.168.2.11 #Google Mini
+      - 192.168.2.16 #S8
+      - 192.168.2.19 # Alexa Dot
+      - 192.168.2.23 #Laptop
+      - 192.168.2.24 #Familyroom Pi
+      - 192.168.2.49 #Piano Lamp Switch
+      - 192.168.2.50 #FamilyroomPi Switch
+      - 192.168.2.51 #pivpn
+      - 192.168.2.54 # Fire HD 8
+
+  - platform: ping
+    hosts:
+      google_mini: 192.168.2.11
+
+  - platform: googlehome
+    host: 192.168.2.11
+  
+#################################################################
+#Binary Sensors
+#################################################################
+
+binary_sensor:
+  - platform: template
+    sensors:
+      s8:
+        friendly_name: S8
+        device_class: connectivity
+        entity_id: device_tracker.a0cc2bc5a65b
+        value_template: "{{ is_state('device_tracker.a0cc2bc5a65b', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.a0cc2bc5a65b', 'home') %}
+            mdi:cellphone-android
+          {% else %}
+            mdi:cellphone-android
+          {% endif %}
+      dot:
+        friendly_name: Dot
+        device_class: connectivity
+        entity_id: device_tracker.40b4cd254eaa
+        value_template: "{{ is_state('device_tracker.40b4cd254eaa', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.40b4cd254eaa', 'home') %}
+            mdi:amazon-alexa
+          {% else %}
+            mdi:amazon-alexa
+          {% endif %}
+      google_mini:
+        friendly_name: Google Mini
+        device_class: connectivity
+        entity_id: device_tracker.48d6d5d2bbc9
+        value_template: "{{ is_state('device_tracker.48d6d5d2bbc9', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.48d6d5d2bbc9', 'home') %}
+            mdi:google-assistant
+          {% else %}
+            mdi:google-assistant
+          {% endif %}
+      laptop:
+        friendly_name: Laptop
+        device_class: connectivity
+        entity_id: device_tracker.88b1116f4fc8
+        value_template: "{{ is_state('device_tracker.88b1116f4fc8', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.88b1116f4fc8', 'home') %}
+            mdi:laptop
+          {% else %}
+            mdi:laptop-off
+          {% endif %}
+      pivpn:
+        friendly_name: PiVPN
+        device_class: connectivity
+        entity_id: device_tracker.b827eb13a285
+        value_template: "{{ is_state('device_tracker.b827eb13a285', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.b827eb13a285', 'home') %}
+            mdi:raspberrypi
+          {% else %}
+            mdi:raspberrypi
+          {% endif %}
+      firehd8:
+        friendly_name: Fire HD8
+        device_class: connectivity
+        entity_id: device_tracker.b0fc0d4ed4b0
+        value_template: "{{ is_state('device_tracker.b0fc0d4ed4b0', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.b0fc0d4ed4b0', 'home') %}
+            mdi:amazon
+          {% else %}
+            mdi:amazon
+          {% endif %}
+      familyroompi:
+        friendly_name: Familyroom Pi
+        device_class: connectivity
+        entity_id: device_tracker.00c140490f31
+        value_template: "{{ is_state('device_tracker.00c140490f31', 'home') }}"
+        icon_template: >-
+          {% if is_state('device_tracker.00c140490f31', 'home') %}
+            mdi:raspberrypi
+          {% else %}
+            mdi:raspberrypi
+          {% endif %}

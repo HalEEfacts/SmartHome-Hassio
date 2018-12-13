@@ -1,0 +1,143 @@
+#################################################################
+#                                                               #
+#                     Packages/Info Sensors                     #
+#                                                               #
+#################################################################
+
+# Data collectors and producers
+
+#################################################################
+#                                                               #
+#                          Customize                            #
+#                                                               #
+#################################################################
+
+homeassistant:
+  customize:
+    sensor.aud_usd:
+      icon: mdi:home-currency-usd
+      friendly_name: "CAD to USD"
+    sensor.gbp_usd:
+      icon: mdi:home-currency-usd
+      friendly_name: "CAD to GBP"
+    sensor.cad_to_gbp:
+      icon: mdi:currency-usd
+    sensor.cad_to_usd:
+      icon: mdi:currency-usd
+    sensor.bitcoin_round:
+      icon: mdi:bitcoin
+    sensor.stats_tv:
+      icon: mdi:theater
+      friendly_name: 'TV (7 days)' 
+    sensor.stats_work:
+      icon: mdi:domain
+      friendly_name: 'Working (7 days)'
+
+#################################################################
+#                                                               #
+#                            Groups                             #
+#                                                               #
+#################################################################
+
+group:
+  currency:
+    name: Currency
+    view: no
+    entities:
+      - sensor.aud_to_usd
+      - sensor.aud_to_gbp
+      - sensor.bitcoin_round
+      
+#  stats:
+#    name: Stats
+#    view: no
+#    entities:
+#      - sensor.stats_tv
+#      - sensor.stats_work
+
+
+#################################################################
+#                                                               #
+#                          Sensors                              #
+#                                                               #
+################################################################# 
+binary_sensor:
+  - platform: iss
+  - platform: uptimerobot
+    api_key: !secret uptime_robot_api
+
+sensor:
+
+  - platform: launch_library
+
+#########   Fitbit
+  - platform: fitbit
+    clock_format: 12H
+    monitored_resources:
+      - "activities/steps"
+      - "activities/distance"
+      - "activities/elevation"
+      - "activities/floors"
+      - "activities/heart"
+      - "sleep/minutesAsleep"
+
+#########   Pocket Casts
+  - platform: pocketcasts
+    username: !secret pocketcasts_username
+    password: !secret pocketcasts_password
+
+######### Test: stats
+  - platform: statistics
+    entity_id: binary_sensor.movement
+    max_age:
+      minutes: 30
+
+######## Not Working: GTFS Halifax Transit
+#  - platform: gtfs
+#    origin: 8286
+#    destination: 8695
+#    data: Halifax_transit.zip
+
+  - platform: alpha_vantage
+    api_key: !secret alphavantage_key
+    foreign_exchange:
+      - from: CAD
+        to: USD
+        name: CAD_USD
+      - from: CAD
+        to: GBP
+        name: CAD_GBP
+      - from: BTC
+        to: CAD
+        name: Bitcoin
+        
+## AUS to GBP Conversion - Did this as for some reason alpha vantage doesn't provide AUD to GBP Rates propably due to being USD based site
+#  - platform: template
+#    sensors:
+#      aud_to_gbp:
+#        unit_of_measurement: 'CAD'
+#        value_template: "{{ (states('sensor.cad_to_usd')|float * states('sensor.cad_to_gbp')|float)|round(2) }}"
+#        friendly_name: 'CAD to GBP'
+#      aud_to_usd:
+#        unit_of_measurement: 'USD'
+#        value_template: "{{ states.sensor.aud_usd.state|round(2) }}"
+#        friendly_name: 'CAD to USD'
+#      usd_to_gbp:
+#        unit_of_measurement: 'USD'
+#        value_template: "{{ states.sensor.usd_gbp.state|round(2) }}"
+#        friendly_name: 'USD to GBP'
+#      bitcoin_round:
+#        unit_of_measurement: 'AUD'
+#        value_template: "{{ states.sensor.bitcoin.state|round }}"
+#        friendly_name: 'Bitcoin'
+
+        
+#  - platform: history_stats
+#    name: stats_tv
+#    entity_id: media_player.living_room_tv_2
+#    state: 'on'
+#    type: time
+#    end: '{{ now() }}'
+#    duration:
+#      days: 7
+   
