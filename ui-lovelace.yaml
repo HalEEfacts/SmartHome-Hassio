@@ -55,10 +55,11 @@ views:
             head: group.familyroomlights
           - type: custom:fold-entity-row
             head: group.bedroomlights
-      -  type: entities
-         title: Christmas
-         entities:
-           - switch.012004762c3ae83ceab3
+      - id: 38ad846de83442159b1fae6eed16622f  # Automatically created id
+        type: entities
+        title: Christmas
+        entities:
+          - switch.012004762c3ae83ceab3
 #########################################
 # Media Cards, only show when playing   #
 #########################################
@@ -109,6 +110,11 @@ views:
             show_source: true
             hide_power: true
             consider_pause_idle: true
+            sonos_grouping:
+              - entity_id: media_player.living_room
+                name: Living Room
+              - entity_id: media_player.dining_room
+                name: Dining Room
           - entity: media_player.dining_room
             type: custom:mini-media-player
             show_progress: true
@@ -118,6 +124,11 @@ views:
             show_source: true
             hide_power: true
             consider_pause_idle: true
+            sonos_grouping:
+              - entity_id: media_player.dining_room
+                name: Dining Room
+              - entity_id: media_player.living_room
+                name: Living Room
           - entity: media_player.dining_room_mini
             type: custom:mini-media-player
             hide_controls: true
@@ -279,6 +290,10 @@ views:
             type: custom:mini-media-player
             group: true
             show_progress: true
+            media_list:
+              - name: Paul Simon
+                type: playlist
+                url: spotify:user:oehmenmacinnis:playlist:p16W9anoxruwY7kHeIHKU5q
           - entity: media_player.dining_room_mini
             type: custom:mini-media-player
             hide_controls: true
@@ -515,7 +530,7 @@ views:
           - input_boolean.test_audio_notification
           - input_boolean.test_text_notification
           - input_boolean.test_webostv_notification
-          
+
 #      - id: 796a45d5175d433ea92bbefab86325af  # Automatically created id
  #       type: glance
 #        title: Speedtest

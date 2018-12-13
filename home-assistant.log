@@ -3895,3 +3895,911 @@ Traceback (most recent call last):
 requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 2018-12-13 11:37:13 ERROR (MainThread) [hole] Can not load data from *hole: localhost
 2018-12-13 11:37:13 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:42:23 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:42:23 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:47:34 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:47:34 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:52:43 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:52:43 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:54:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 11:54:46 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:54:47 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 11:54:47 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:55:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 11:55:29 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:55:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 11:55:41 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:55:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 11:56:00 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:57:24 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:57:25 ERROR (MainThread) [homeassistant.core] Error doing job: Future exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 92, in poll_devices_update
+    tuya.poll_devices_update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 105, in poll_devices_update
+    return self.discover_devices()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 108, in discover_devices
+    response = self._request('Discovery', 'discovery')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:57:26 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:57:53 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 11:57:53 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 11:58:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 11:58:04 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 11:58:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 11:58:16 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 12:03:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:03:02 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:05:09 WARNING (SyncWorker_11) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:05:40 WARNING (SyncWorker_6) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:06:11 WARNING (SyncWorker_10) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:06:42 WARNING (SyncWorker_10) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:07:14 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:07:44 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:08:12 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:08:12 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:08:15 WARNING (SyncWorker_13) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:08:47 WARNING (SyncWorker_1) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:09:16 WARNING (SyncWorker_0) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:09:47 WARNING (SyncWorker_1) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:10:18 WARNING (SyncWorker_3) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:10:50 WARNING (SyncWorker_3) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:11:21 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:11:50 WARNING (SyncWorker_14) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:12:23 WARNING (SyncWorker_19) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:12:54 WARNING (SyncWorker_8) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:13:22 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:13:22 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:13:25 WARNING (SyncWorker_13) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:13:57 WARNING (SyncWorker_14) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:14:28 WARNING (SyncWorker_9) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:14:58 WARNING (SyncWorker_14) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:15:28 WARNING (SyncWorker_14) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:15:58 WARNING (SyncWorker_3) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:16:28 WARNING (SyncWorker_8) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:17:01 WARNING (SyncWorker_15) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:17:30 WARNING (SyncWorker_11) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:18:01 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:18:32 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:18:32 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:18:32 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:19:04 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:19:34 WARNING (SyncWorker_16) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:20:05 WARNING (SyncWorker_11) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:20:36 WARNING (SyncWorker_13) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:21:08 WARNING (SyncWorker_5) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:21:39 WARNING (SyncWorker_9) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:22:12 WARNING (SyncWorker_1) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:22:41 WARNING (SyncWorker_16) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:23:12 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:23:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:23:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:23:43 WARNING (SyncWorker_17) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:24:14 WARNING (SyncWorker_11) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:24:45 WARNING (SyncWorker_7) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:25:16 WARNING (SyncWorker_19) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:25:47 WARNING (SyncWorker_19) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:26:18 WARNING (SyncWorker_4) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:26:49 WARNING (SyncWorker_12) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:27:20 WARNING (SyncWorker_3) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:27:51 WARNING (SyncWorker_7) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:28:52 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:28:52 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:34:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:34:02 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:35:39 WARNING (SyncWorker_15) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 12:39:11 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:39:11 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:44:21 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:44:21 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:49:31 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:49:31 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:54:39 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:54:39 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 12:59:49 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 12:59:49 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:04:59 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:04:59 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:10:09 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:10:09 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:15:19 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:15:19 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:20:28 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:20:28 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:25:38 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:25:38 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:30:47 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:30:47 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:32:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.cad_gbp is taking over 10 seconds
+2018-12-13 13:34:57 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.cad_gbp fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/sensor/alpha_vantage.py", line 216, in update
+    from_currency=self._from_currency, to_currency=self._to_currency)
+  File "/usr/local/lib/python3.6/site-packages/alpha_vantage/alphavantage.py", line 175, in _format_wrapper
+    self, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/alpha_vantage/alphavantage.py", line 160, in _call_wrapper
+    return self._handle_api_call(url), data_key, meta_data_key
+  File "/usr/local/lib/python3.6/site-packages/alpha_vantage/alphavantage.py", line 76, in _retry_wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/alpha_vantage/alphavantage.py", line 268, in _handle_api_call
+    response = requests.get(url, proxies=self.proxy)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 668, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 668, in <listcomp>
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 247, in resolve_redirects
+    **adapter_kwargs
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 13:35:57 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:35:57 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:39:07 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:39:36 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:41:07 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:41:07 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:46:16 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:46:16 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:51:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 13:51:06 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:51:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 13:51:17 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:51:26 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:51:26 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:53:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 13:53:11 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:53:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 13:53:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:54:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 13:54:13 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 161, in _request
+    response_json = response.json()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/__init__.py", line 518, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "/usr/local/lib/python3.6/site-packages/simplejson/decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-12-13 13:56:36 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 13:56:36 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 13:57:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-12-13 13:58:09 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 13:58:40 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 13:59:11 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 13:59:41 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 190, in update
+    current = self._player.current_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 856, in current_playback
+    return self._get("me/player", market = market)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 14:01:46 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:01:46 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:06:56 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:06:56 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:12:06 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:12:06 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:17:16 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:17:16 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:22:26 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:22:26 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:27:35 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:27:35 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:32:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:32:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:34:12 ERROR (SyncWorker_0) [homeassistant.components.media_player.sonos] Error on play_media with UPnP Error 714 received: Illegal MIME-Type from 192.168.2.27
+2018-12-13 14:34:22 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 277, in _handle_service_platform_call
+    await getattr(entity, func)(**data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/__init__.py", line 482, in turn_on
+    raise NotImplementedError()
+NotImplementedError
+2018-12-13 14:34:26 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 277, in _handle_service_platform_call
+    await getattr(entity, func)(**data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 236, in media_play
+    self._player.start_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Player command failed: No active device found
+2018-12-13 14:34:33 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 277, in _handle_service_platform_call
+    await getattr(entity, func)(**data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 236, in media_play
+    self._player.start_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Player command failed: No active device found
+2018-12-13 14:36:48 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 279, in _handle_service_platform_call
+    await func(entity, data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 261, in play_media
+    self._player.start_playback(**kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Player command failed: No active device found
+2018-12-13 14:36:54 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 277, in _handle_service_platform_call
+    await getattr(entity, func)(**data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 236, in media_play
+    self._player.start_playback()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Player command failed: No active device found
+2018-12-13 14:37:55 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:37:55 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:41:35 WARNING (SyncWorker_8) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 14:43:05 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:43:05 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:43:58 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 279, in _handle_service_platform_call
+    await func(entity, data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 261, in play_media
+    self._player.start_playback(**kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 404, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Player command failed: No active device found
+2018-12-13 14:44:26 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 279, in _handle_service_platform_call
+    await func(entity, data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 261, in play_media
+    self._player.start_playback(**kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 500, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Server error.
+2018-12-13 14:44:27 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 121, in _internal_call
+    r.raise_for_status()
+  File "/usr/local/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.spotify.com/v1/me/player/play
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/service.py", line 279, in _handle_service_platform_call
+    await func(entity, data)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 261, in play_media
+    self._player.start_playback(**kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 913, in start_playback
+    return self._put(self._append_device_id("me/player/play", device_id), payload=data)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 190, in _put
+    return self._internal_call('PUT', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 126, in _internal_call
+    headers=r.headers)
+spotipy.client.SpotifyException: http status: 500, code:-1 - https://api.spotify.com/v1/me/player/play:
+ Server error.
