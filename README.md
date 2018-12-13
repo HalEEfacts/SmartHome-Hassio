@@ -8,7 +8,8 @@ This is my Smart Home. It uses Home Assistant to bridge and automate all my home
 4. [Screenshots](#screenshots)
 5. [Information](#information)
 6. [Configuration](#configuration)
-
+    - [Official Add-ons](#official-add-ons)
+    - [Third Party Add-ons](#third-party-add-ons)
 # Devices
 ## Cloud Devices
 
@@ -176,24 +177,29 @@ This is the main directory of the Repo.  You will find more helpful ReadMe files
 # Installation Process:
 I'm currently running [Home Assistant](https://home-assistant.io) version __0.81__. My preferred installation method is the [HASS.io Method](https://www.home-assistant.io/hassio/). Simply download, and install on SD card via [Etcher](https://etcher.io/).  Install addons: see below.
 
-# Addons
+### Official Add-ons
+
  I am running the following Hass.io add-ons:
-* Configurator
-* __[Node-RED](https://github.com/hassio-addons/addon-node-red/blob/v0.6.1/README.md)__
-* __[DuckDNS](www.home-assistant.io/addons/duckdns/)__ Provides DuckDNS updates and creates a Lets Encrypt Certificate
-* __[Mosquitto MQTT broker](https://www.home-assistant.io/addons/mosquitto/)__ MQTT Broker
-* __[Network UPS Tools](https://github.com/asciinaut/hassio-addons)__ A NUT Server
-* __[Pi-Hole](https://github.com/hassio-addons/addon-pi-hole/blob/master/README.md)__ DNS Server / Ad Blocker
-* __[SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh/blob/master/README.md)__ SSH for Hass.io
-* __[Samba](https://www.home-assistant.io/addons/samba/)__ Samba share of config files and backup files
-* __[TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin)__ Easy managment of tasmota flashed devices
-* __[MotionEye]__
 
-### Configurator:
+* [DuckDNS](https://www.home-assistant.io/addons/duckdns/) - Updates your Duck DNS IP address and generate SSL using Let's Encrypt.
+* [HASS Configurator](https://www.home-assistant.io/addons/configurator/) - Browser-based configuration file editor.
+* [Mosquitto](https://www.home-assistant.io/addons/mosquitto/) - Fast and reliable MQTT broker.
+* [Samba](https://www.home-assistant.io/addons/samba/) - Access your configuration files using Windows network shares.
+* [NGINX SSL proxy](https://www.home-assistant.io/addons/nginx_proxy/) - Reverse proxy with SSL termination.
 
-### Backup
-Addon Git, configure via [this guide](https://www.home-assistant.io/docs/ecosystem/backup/backup_github/).
+### Third Party Add-ons
 
+* [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh) - SSH and Web-based terminal with tons of pre-loaded useful tools, including Git, configure via [this guide](https://www.home-assistant.io/docs/ecosystem/backup/backup_github/).
+* [Pi-hole](https://github.com/hassio-addons/addon-pi-hole) - Network-wide ad blocking.
+* [UniFi Controller](https://github.com/hassio-addons/addon-unifi) - The UniFi Controller allows you to manage your UniFi network using a web browser.
+* [Node-RED](https://github.com/hassio-addons/addon-node-red) - Flow-based programming for the Internet of Things.
+* [Plex Media Server](https://github.com/hassio-addons/addon-plex) - Your recorded media beautifully organized and ready to stream.
+* [zigbee2mqtt](https://github.com/danielwelch/hassio-zigbee2mqtt) - Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges.
+* [Dropbox Sync](https://github.com/danielwelch/hassio-dropbox-sync) - Upload your backup snapshots to Dropbox.
+* [Log Viewer](https://github.com/hassio-addons/addon-log-viewer) - Browser-based live log viewing utility.
+* [Tautulli](https://github.com/hassio-addons/addon-tautulli) - Monitor and get statistics from your Plex server.
+* [motionEye](https://github.com/hassio-addons/addon-motioneye) - Simple, elegant and feature-rich CCTV/NVR for your cameras.
+* [TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin -  Easy managment of tasmota flashed devices
 
 # Configuration/Components
 
