@@ -4803,3 +4803,696 @@ Traceback (most recent call last):
     headers=r.headers)
 spotipy.client.SpotifyException: http status: 500, code:-1 - https://api.spotify.com/v1/me/player/play:
  Server error.
+2018-12-13 14:48:15 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:48:15 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:49:22 ERROR (SyncWorker_18) [homeassistant.components.sensor.haveibeenpwned] Failed fetching data for corynney@hotmail.com
+2018-12-13 14:53:25 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:53:25 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 14:58:35 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 14:58:35 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:03:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:03:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:08:55 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:08:55 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:14:05 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:14:05 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:19:15 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:19:15 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:24:25 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:24:25 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:29:35 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:29:35 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:34:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:34:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:39:55 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:39:55 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:45:05 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:45:05 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:50:15 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:50:15 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 15:55:25 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 15:55:25 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:00:34 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:00:34 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:05:04 ERROR (MainThread) [frontend.js.latest.201811211] http://192.168.2.34:8123/lovelace/0:0:0 Uncaught 
+2018-12-13 16:05:44 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:05:44 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:10:53 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:10:53 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:16:03 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:16:03 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:21:13 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:21:13 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:25:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 16:25:21 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 16:25:51 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 16:26:11 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 159, in _request
+    json = data
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 16:26:23 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:26:23 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:31:32 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:31:32 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:36:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:36:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:41:51 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:41:51 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:44:32 ERROR (MainThread) [frontend.js.latest.201811211] http://192.168.2.34:8123/lovelace/0:0:0 Uncaught 
+2018-12-13 16:47:01 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:47:01 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:52:11 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:52:11 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 16:57:21 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 16:57:21 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:02:31 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:02:31 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:07:41 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:07:41 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:12:50 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:12:50 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:14:07 WARNING (MainThread) [homeassistant.components.switch.wemo] Lost connection to WeMo Switch
+2018-12-13 17:18:00 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:18:00 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:20:30 ERROR (SyncWorker_6) [asyncio] Task was destroyed but it is pending!
+task: <Task pending coro=<WebOsClient._command() done, defined at /usr/local/lib/python3.6/site-packages/pylgtv/webos_client.py:145> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x6d5a4710>()]>>
+2018-12-13 17:20:30 ERROR (SyncWorker_6) [asyncio] Task was destroyed but it is pending!
+task: <Task pending coro=<WebSocketCommonProtocol.transfer_data() done, defined at /usr/local/lib/python3.6/site-packages/websockets/protocol.py:518> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x6bc4e390>()]> cb=[_wait.<locals>._on_completion() at /usr/local/lib/python3.6/asyncio/tasks.py:380, <TaskWakeupMethWrapper object at 0x6bc4e790>()]>
+2018-12-13 17:20:30 ERROR (SyncWorker_6) [asyncio] Task was destroyed but it is pending!
+task: <Task pending coro=<WebSocketCommonProtocol.close_connection() done, defined at /usr/local/lib/python3.6/site-packages/websockets/protocol.py:788> wait_for=<Task pending coro=<WebSocketCommonProtocol.transfer_data() done, defined at /usr/local/lib/python3.6/site-packages/websockets/protocol.py:518> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x6bc4e390>()]> cb=[_wait.<locals>._on_completion() at /usr/local/lib/python3.6/asyncio/tasks.py:380, <TaskWakeupMethWrapper object at 0x6bc4e790>()]>>
+2018-12-13 17:22:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.spotify is taking over 10 seconds
+2018-12-13 17:22:39 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:23:10 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:23:10 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:23:10 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:23:41 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:24:12 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:24:43 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:25:14 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:25:45 WARNING (MainThread) [homeassistant.components.media_player] Updating spotify media_player took longer than the scheduled update interval 0:00:30
+2018-12-13 17:26:02 ERROR (MainThread) [homeassistant.helpers.entity] Update for media_player.spotify fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/media_player/spotify.py", line 176, in update
+    player_devices = self._player.devices()
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 848, in devices
+    return self._get("me/player/devices")
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 148, in _get
+    return self._internal_call('GET', url, payload, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/spotipy/client.py", line 110, in _internal_call
+    r = self._session.request(method, url, headers=headers, proxies=self.proxies, **args)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 17:28:20 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:28:20 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:33:29 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:33:29 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:38:39 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:38:39 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:43:49 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:43:49 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:48:59 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:48:59 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:54:08 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:54:08 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 17:59:18 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 17:59:18 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:04:27 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:04:27 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:09:37 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:09:37 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:14:47 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:14:47 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:19:56 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:19:56 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:25:06 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:25:06 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:30:17 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:30:17 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:35:26 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:35:26 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:40:36 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:40:36 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:45:45 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:45:45 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:50:55 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:50:55 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 18:56:05 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 18:56:05 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:01:13 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:01:13 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:06:23 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:06:23 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:11:33 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:11:33 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:16:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:16:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:21:52 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:21:52 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:27:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:27:02 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:32:12 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:32:12 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:37:22 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:37:22 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:42:32 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:42:32 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:45:13 WARNING (SyncWorker_12) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 19:45:51 ERROR (MainThread) [ghlocalapi.bluetooth] Error connecting to 192.168.2.11 - 
+2018-12-13 19:45:56 ERROR (MainThread) [ghlocalapi.bluetooth] Error connecting to 192.168.2.11 - 
+2018-12-13 19:45:59 WARNING (MainThread) [homeassistant.components.device_tracker] Updating device list from googlehome took longer than the scheduled scan interval 0:00:12
+2018-12-13 19:45:59 WARNING (Thread-2) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-12-13 19:45:59 WARNING (Thread-4) [pychromecast.socket_client] Heartbeat timeout, resetting connection
+2018-12-13 19:47:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:47:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:52:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae840b45c is taking over 10 seconds
+2018-12-13 19:52:52 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:52:52 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 19:52:53 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 19:53:24 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 19:53:55 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 19:54:26 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 19:54:57 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 19:55:01 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae840b45c fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 159, in _request
+    json = data
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 19:58:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 19:58:02 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:03:12 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:03:12 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:06:24 ERROR (MainThread) [homeassistant.helpers.entity] Update for binary_sensor.iss fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 306, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='api.open-notify.org', port=80): Read timed out. (read timeout=5)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/binary_sensor/iss.py", line 101, in update
+    self.iss_data.update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/util/__init__.py", line 324, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/binary_sensor/iss.py", line 125, in update
+    self.number_of_people_in_space = iss.number_of_people_in_space()
+  File "/usr/local/lib/python3.6/site-packages/pyiss/__init__.py", line 101, in number_of_people_in_space
+    return self.people_in_space()['number']
+  File "/usr/local/lib/python3.6/site-packages/pyiss/__init__.py", line 26, in people_in_space
+    timeout=5)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='api.open-notify.org', port=80): Read timed out. (read timeout=5)
+2018-12-13 20:08:22 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:08:22 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:13:32 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:13:32 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:18:00 ERROR (MainThread) [frontend.js.latest.201811211] http://192.168.2.34:8123/lovelace/0:0:0 Uncaught 
+2018-12-13 20:18:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:18:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:23:52 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:23:52 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:26:25 ERROR (MainThread) [frontend.js.latest.201811211] http://192.168.2.34:8123/lovelace/0:0:0 Uncaught 
+2018-12-13 20:29:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:29:02 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:34:10 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:34:10 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:39:20 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:39:20 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:44:30 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:44:30 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:49:42 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:49:42 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:54:52 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 20:54:52 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 20:58:01 WARNING (SyncWorker_2) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 21:00:02 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:00:03 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:05:11 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:05:11 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:06:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_minutely_summary is taking over 10 seconds
+2018-12-13 21:06:44 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-12-13 21:07:15 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-12-13 21:07:46 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-12-13 21:08:17 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2018-12-13 21:10:19 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:10:19 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:15:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 21:15:29 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:15:29 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:15:31 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 21:16:02 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 21:16:33 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 21:17:04 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 21:17:35 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 21:17:42 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 159, in _request
+    json = data
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 21:20:39 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:20:39 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:23:17 WARNING (SyncWorker_1) [homeassistant.components.binary_sensor.uptimerobot] Failed to get new state
+2018-12-13 21:25:49 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:25:49 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:30:58 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:30:58 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:36:08 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:36:08 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:41:18 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:41:18 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:46:28 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:46:28 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:51:37 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:51:37 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:56:47 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 21:56:47 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 21:57:18 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+TimeoutError: [Errno 110] Operation timed out
+2018-12-13 22:01:57 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 22:01:57 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 22:02:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of switch.012004762c3ae83ceab3 is taking over 10 seconds
+2018-12-13 22:02:29 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 22:03:00 WARNING (MainThread) [homeassistant.components.switch] Updating tuya switch took longer than the scheduled update interval 0:00:30
+2018-12-13 22:03:27 ERROR (MainThread) [homeassistant.helpers.entity] Update for switch.012004762c3ae83ceab3 fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py", line 367, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/urllib3/connection.py", line 344, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 344, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 221, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/helpers/entity.py", line 349, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.6/site-packages/homeassistant/components/tuya.py", line 156, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 134, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.6/site-packages/tuyapy/tuyaapi.py", line 159, in _request
+    json = data
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2018-12-13 22:07:07 ERROR (MainThread) [hole] Can not load data from *hole: localhost
+2018-12-13 22:07:07 ERROR (MainThread) [homeassistant.components.sensor.pi_hole] Unable to fetch data from Pi-hole
+2018-12-13 22:08:41 WARNING (MainThread) [aiohttp.websocket] websocket connection is closing.

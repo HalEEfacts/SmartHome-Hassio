@@ -94,7 +94,15 @@ views:
           type: entities
           entities:
             - media_player.family_room_tv
-
+      - id: 398e6591g35843429ed3d0c0127ki957  # Automatically created id
+        type: conditional
+        conditions:
+          - entity: media_player.spotify
+            state_not: "idle"
+        card:
+          type: entities
+          entities:
+            - media_player.spotify
 #############################################
 #  Media Player Controller , always on      #
 #############################################
@@ -134,18 +142,6 @@ views:
             hide_controls: true
             show_tts: google
             group: true
-          - entity: media_player.living_room_tv
-            type: custom:mini-media-player
-            hide_controls: true
-            group: true
-          - entity: media_player.family_room_tv
-            type: custom:mini-media-player
-            hide_controls: true
-            group: true
-          - entity: media_player.spotify
-            type: custom:mini-media-player
-            group: true
-            show_progress: true
 #        - entity: media_player.livingroom_dashboard
 #          type: custom:mini-media-player
 #          group: true
