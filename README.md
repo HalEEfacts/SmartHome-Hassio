@@ -129,7 +129,7 @@ Typical Automations in use (or planned to be) include
 
 | [![TravisCI](https://travis-ci.org/HalEEfacts/SmartHome.svg?branch=master)](https://travis-ci.org/HalEEfacts/SmartHome) | [![LastCommit](https://img.shields.io/github/last-commit/HalEEfacts/SmartHome.svg?color=blue&style=plasticr)](https://github.com/HalEEfacts/SmartHome/commits/master)|
 |:---:|:---:|
-| This shows whether the configuration in this repo is valid. [Version I'm running.](/.HA_VERSION) | This shows how up to date this repo is |
+| This shows whether the configuration in this repo is valid. [Version I'm running.](.HA_VERSION) | This shows how up to date this repo is |
 | [![GitHub stars](https://img.shields.io/github/stars/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome/stargazers) | [![GitHub issues](https://img.shields.io/github/issues/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome/issues) |
 | Please :star: this repo if you find it useful, like these people have. | This is like my TODO list |
 |[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)| [![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/HalEEfacts/SmartHome/pulls) |
