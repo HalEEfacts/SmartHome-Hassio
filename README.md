@@ -24,6 +24,7 @@ Around the house I have:
 
 <details><summary>Cloud Devices</summary>
 <p>
+    
 ### Outlets
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
