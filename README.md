@@ -11,14 +11,19 @@ This is my Smart Home. It uses Home Assistant to bridge and automate all my home
     - [Official Add-ons](#official-add-ons)
     - [Third Party Add-ons](#third-party-add-ons)
 # Devices
-## Cloud Devices
+Around the house I have:
 
+<details><summary>Cloud Devices</summary>
+<p>
+    
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | [Amazon Echo Dot](https://www.amazon.com/All-New-Amazon-Echo-Dot-Add-Alexa-To-Any-Room/dp/B01DFKC2SO) | 1 | Wifi | https://www.home-assistant.io/components/alexa/ | Used for voice commands to turn devices on/off using the [Emulated Hue Component](https://home-assistant.io/components/emulated_hue/) |
 | [Google Mini](https://store.google.com/product/google_home_mini) | 1 | Wi-Fi | [Assistant](https://www.home-assistant.io/components/google_assistant/) | also for voice control, vie build in cloud service or DIY.|
+</p></details>
 
-## Wifi Devices
+<details><summary>Cloud Devices</summary>
+<p>
 ### Outlets
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
@@ -47,33 +52,39 @@ This is my Smart Home. It uses Home Assistant to bridge and automate all my home
 | [Pi 2 B](http://amzn.to/B01CD5VC92) | 2 | Wifi | | Runs as home computer (Raspbian, etc) with WebCam (installed via [1](https://blog.kalavala.net/smarthome/camera/), [CUPS](https://www.cups.org/) for Printer connection via MQTT, and NAS
 
 *Technically Zigbee based, but added through Hue they dont require a zigbee hub.
+</p></details>
 
-## Hardwired Devices
+<details><summary>Hardwired Devices</summary>
+<p>
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | [Philips Hue Hub Gen 2](http://amzn.to/2eoQTJy) | 1 | LAN | Hue |
 | [Pi B+](http://amzn.to/B01CD5VC92)__ Hub, See above (Hass.io)
 | [Ikea TRÅDFRI Gateway](http://www.ikea.com/us/en/catalog/products/00337813/) | 0 | LAN | | 
+</p></details>
 
-#### Outdoor Landscaping
+<details><summary>Outdoor Landscaping</summary>
+<p>
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | [Rachio Sprinkler system](http://amzn.to/2eoPKBW) | 0 | Wifi | | |
 | [GE ZWave Outdoor Power Module](http://amzn.to/2q17R4S) | 0 | | |
 |[Phyn Smart Water Main ShutOff/Leak Detector](http://www.phyn.com/) | 0 | | |
 | [Outdoor LED Lighting](http://www.vmwareinfo.com/2017/08/diy-outdoor-smart-home-led-strips.html) | 0 | | |
+</p></details>
 
-
-#### Outdoor LED Accents
+<details><summary>Outdoor LED Accents</summary>
+<p>
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | [LED RGB Wifi Controller - flux_led compatible](http://amzn.to/2jUBSBE) | 0 | | |
 | [LED Strip kits](http://amzn.to/2gJYfZ5) | 0 | | |
 | [Aluminum light Diffusers](http://amzn.to/2CIId82) | 0 | | |
 | [Outdoor Housing](http://amzn.to/2m2dG0X) | 0 | | |
+</p></details>
 
-
-#### Sensors
+<details><summary>Sensors</summary>
+<p>
 | Device  | Quantity | Connection | Home Assistant | Notes |
 | ------------- | :---: | ------------- | ------------- | ------------- |
 | [Pi Zero](http://amzn.to/2ougZQ3) | 0 | | |
@@ -81,6 +92,7 @@ This is my Smart Home. It uses Home Assistant to bridge and automate all my home
 | [MX350 Printer]( http://a.co/d/1GxbxER) | 1 | | |
 | [Xiaomi motion sensors](1) | 0 | | |
 | [Xiaomic Button](2) | 0 | | |
+</p></details>
 
 # Security
 These are the steps I have taken to add some level of security to my Home Assistant instance.
