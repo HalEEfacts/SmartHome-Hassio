@@ -5,18 +5,20 @@
 # the code in the repo is fully valid                     #
 #                                                         #
 ###########################################################
-
-
 version: 2
 jobs:
   build:
     docker:
-      - image: homeassistant/amd64-homeassistant
+      - image: circleci/python:3.6.4
     working_directory: ~/repo
     steps:
       - checkout
       - run:
           name: Check config
           command: |
+            touch fake.pem
             mv travis_secrets.yaml secrets.yaml
-            hass -c homeassistant/ --script check_config --info all
+            python3.6 -m venv .
+            source bin/activate
+            pip3 install --pre --upgrade homeassistant
+            hass -c . --script check_config --info all
