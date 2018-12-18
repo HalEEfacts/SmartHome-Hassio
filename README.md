@@ -1,3 +1,4 @@
+[![TravisCI](https://travis-ci.org/HalEEfacts/SmartHome.svg?branch=master)](https://travis-ci.org/HalEEfacts/SmartHome) [![LastCommit](https://img.shields.io/github/last-commit/HalEEfacts/SmartHome.svg?color=blue&style=plasticr)](https://github.com/HalEEfacts/SmartHome/commits/master) [![GitHub stars](https://img.shields.io/github/stars/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome-Hassio/stargazers) [![GitHub issues](https://img.shields.io/github/issues/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome-Hassio/issues) [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/HalEEfacts/SmartHome-Hassio/pulls) [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m780352466-da3a90fa1da0e09f6f0ee745.svg)](https://uptimerobot.com/) [![Buy Me A Beer](https://img.shields.io/badge/BuyMeABeer-Paypal-blue.svg)](https://paypal.me/HalEEfacts)
 
 This is my Smart Home. It uses Home Assistant to bridge and automate all my home automation products. It runs on a [Raspberry Pi Model B+](https://www.amazon.com/dp/B07BDR5PDW/ref=psdc_1048424_t2_B07BFH96M3) running [Hass.io](https://www.home-assistant.io/hassio/). Related repositories: Arduino for DIY sensors/lights/switches etc,  "NextCloudPi" for the NAS.
 
@@ -139,16 +140,6 @@ Typical Automations in use (or planned to be) include
 * [Awesome-HA](https://www.awesome-ha.com/)
 * [Lovelace Gallery](https://home-assistant-lovelace-gallery.netlify.com/#)
 *
-
-| [![TravisCI](https://travis-ci.org/HalEEfacts/SmartHome.svg?branch=master)](https://travis-ci.org/HalEEfacts/SmartHome) | [![LastCommit](https://img.shields.io/github/last-commit/HalEEfacts/SmartHome.svg?color=blue&style=plasticr)](https://github.com/HalEEfacts/SmartHome/commits/master)|
-|:---:|:---:|
-| This shows whether the configuration in this repo is valid. [Version I'm running.](.HA_VERSION) | This shows how up to date this repo is |
-| [![GitHub stars](https://img.shields.io/github/stars/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome-Hassio/stargazers) | [![GitHub issues](https://img.shields.io/github/issues/HalEEfacts/SmartHome.svg)](https://github.com/HalEEfacts/SmartHome-Hassio/issues) |
-| Please :star: this repo if you find it useful, like these people have. | This is like my TODO list |
-|[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)| [![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/HalEEfacts/SmartHome-Hassio/pulls) |
-| This tells you you can use anything you like from this repo for your project, gratis! | If you have any ideas, they're always welcome.  Either submit an issue or a PR, or drop me a message! |
-| [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m780352466-da3a90fa1da0e09f6f0ee745.svg)](https://uptimerobot.com/) | [![Buy Me A Beer](https://img.shields.io/badge/BuyMeABeer-Paypal-blue.svg)](https://paypal.me/HalEEfacts) |
-| I use Uptime Robot to monitor my instance from outside in case of crashes - Guide coming soon. | Sometimes people want to buy me a beer when I've been helpful, now it's as easy as clicking the badge! |
 
 # Confguration
 
