@@ -219,6 +219,7 @@ I'm currently running [Home Assistant](https://home-assistant.io) version __0.81
 ## Custom Cards
 https://github.com/custom-cards
 https://github.com/kalkih/mini-graph-card
+https://github.com/kalkih/mini-media-player
 https://github.com/nervetattoo/banner-card
 * https://github.com/custom-cards/surveillance-card
 * mini media player, thank you https://github.com/JamesMcCarthy79/Home-Assistant-Config/tree/master/config
