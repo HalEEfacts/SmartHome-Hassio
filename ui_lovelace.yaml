@@ -1,0 +1,362 @@
+default_config:
+frontend:
+  themes: !include_dir_merge_named themes
+
+##############################################
+#            Components                      #
+##############################################
+apcupsd:
+
+camera:
+  - platform: environment_canada
+
+  - platform: ffmpeg
+    name: Front Door
+    input: !secret wyzertsp
+
+cast:
+  media_player:
+    - host: 192.168.0.4
+    - host: 192.168.0.10
+
+glances:
+  - host: 192.168.0.26
+
+input_select:
+  trevor_status_dropdown:
+    name: Trevor
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+  corynne_status_dropdown:
+    name: Corynne
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+
+light:
+  - platform: switch
+    name: Piano Lamp
+    entity_id: switch.012004762c3ae840b45c
+
+  - platform: switch
+    name: Big Lamp
+    entity_id: switch.012004766001946e4696
+
+  - platform: switch
+    name: Workshop Lights
+    entity_id: switch.012004762c3ae83ceab3
+    
+  - platform: group
+    name: Living room lights
+    entities:
+      - light.piano_lamp
+      - light.big_lamp
+      
+  - platform: group
+    name: Basement lights
+    entities:
+      - light.recroom_1
+      - light.recroom_2
+      - light.downstairs
+      - light.workshop_lights
+      - light.workshop_sink
+
+lutron_caseta:
+  host: 192.168.0.23
+  keyfile: /ssl/lutron/caseta.key
+  certfile: /ssl/lutron/caseta.crt
+  ca_certs: /ssl/lutron/caseta-bridge.crt
+
+media_player:
+        
+        
+notify:
+#  - platform: pushbullet
+#    api_key: !secret pushbullet_api
+#    name: pushbullet
+  - platform: slack
+    name: homeslack
+    api_key: !secret slack_api
+    default_channel: '#home'
+  - platform: webostv
+    host: !secret webostv_host
+    name: lg_tv
+    filename: webostv.conf
+#mqtt:
+#  broker: a0d7b954-mqtt
+#  username: !secret mqtt_username
+#  password: !secret mqtt_password
+#  client_id: home-assistant
+
+rest_command:
+  slack_api:
+    url: !secret slack_rest_api
+    content_type: 'application/json; charset=utf-8'
+    verify_ssl: true
+    method: 'post'
+    timeout: 20
+    headers:
+      Authorization: !secret slackbot_token
+    payload: '{{ payload }}'
+
+scene:
+- name: TV Scene
+  entities: {}
+- name: Bedtime Scene
+  entities: {}
+- name: Good Morning Scene
+  entities: {}
+
+
+sensor:
+
+  - platform: airvisual
+    api_key: !secret airvisual_api
+    city: !secret airvisual_city
+    state: !secret airvisual_state
+    country: !secret airvisual_country
+    monitored_conditions:
+      - us
+    show_on_map: true
+    
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+
+  - platform: command_line
+    name: GPU Temperature
+    command: "/opt/vc/bin/vcgencmd measure_temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | replace("temp=", "") | replace("''C", "") }}'
+
+  - platform: command_line
+    command: "ip route get 1 | awk '{print $NF;exit}'"
+
+  - platform: environment_canada
+    station: !secret ec_station
+
+  - platform: fitbit
+    clock_format: 12H
+    monitored_resources:
+      - "activities/activityCalories"
+      - "activities/calories"
+      - "activities/caloriesBMR"
+      - "activities/distance"
+      - "activities/elevation"
+      - "activities/floors"
+      - "activities/heart"
+      - "activities/minutesFairlyActive"
+      - "activities/minutesLightlyActive"
+      - "activities/minutesSedentary"
+      - "activities/minutesVeryActive"
+      - "activities/steps"
+      - "devices/battery"
+      - "sleep/awakeningsCount"
+      - "sleep/efficiency"
+      - "sleep/minutesAfterWakeup"
+      - "sleep/minutesAsleep"
+      - "sleep/minutesAwake"
+      - "sleep/minutesToFallAsleep"
+      - "sleep/startTime"
+      - "sleep/timeInBed"
+
+  - platform: flunearyou
+    latitude: !secret fnu_lat
+    longitude: !secret fnu_long
+
+  - platform: github
+    access_token: !secret github_access_token
+    repositories:
+      - path: 'home-assistant/home-assistant'
+
+  - platform: google_geocode
+    name: Trevor
+    origin: device_tracker.mobile_phone
+    options: street_number, street, city
+    display_zone: hide
+    gravatar: !secret google_geocode_gravatar
+    api_key: !secret google_geocode_api
+
+  - platform: gtfs
+    origin: 8286
+    destination: 7601
+    data: bus.zip
+    include_tomorrow: true
+
+  - platform: moon
+
+  - platform: reddit
+    username: !secret reddit_username
+    password: !secret reddit_password
+    client_id: !secret reddit_client_id
+    client_secret: !secret reddit_client_secret
+    subreddits:
+      - news
+      - worldnews
+      - homeassistant
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: processor_use
+      - type: memory_use_percent
+      - type: last_boot
+
+  - platform: template
+    sensors:
+
+      sensor_count:
+        entity_id: []
+        friendly_name: 'Number of Sensors'
+        value_template: '{{ states.sensor | count }}'
+
+      automation_count:
+        entity_id: []
+        friendly_name: 'Number of Automations'
+        value_template: '{{ states.automation | count }}'
+
+      script_count:
+        entity_id: []
+        friendly_name: 'Number of Scripts'
+        value_template: '{{ states.script | count }}'
+
+      switch_count:
+        entity_id: []
+        friendly_name: 'Number of Switches'
+        value_template: '{{ states.switch | count }}'
+
+      binary_sensor_count:
+        entity_id: []
+        friendly_name: 'Number of Binary Sensors'
+        value_template: '{{ states.binary_sensor | count }}'
+
+      lights_count:
+        entity_id: []
+        friendly_name: 'Number of Lights'
+        value_template: '{{ states.light | count }}'
+
+      tracker_count:
+        entity_id: []
+        friendly_name: 'Number of Devices'
+        value_template: '{{ states.device_tracker | count }}'
+
+### Non binary status
+      trevor_status:
+        value_template: '{{ states.input_select.trevor_status_dropdown.state }}'
+        friendly_name: 'Trevor'
+      corynne_status:
+        value_template: '{{ states.input_select.corynne_status_dropdown.state }}'
+        friendly_name: 'Corynne'
+ 
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+
+  - platform: version
+    name: Installed Version
+    source: local
+
+  - platform: version
+    name: Latest Available Version
+    beta: false
+    image: raspberrypi4
+    source: hassio
+
+  - platform: waze_travel_time
+    name: Trevors Commute
+    origin: !secret waze_origin
+    destination: !secret waze_destination
+    region: 'US'
+
+  - platform: uptime
+    unit_of_measurement: hours
+
+  - platform: filesize
+    file_paths:
+      - /config/home-assistant_v2.db
+      - /config/.storage/lovelace
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+system_health:
+
+tts:
+  - platform: google_translate
+
+tuya:
+  username: !secret tuya_username
+  password: !secret tuya_password
+  country_code: !secret tuya_country_code
+
+wake_on_lan:
+
+weather:
+  - platform: environment_canada
+
+webostv:
+  host: !secret webostv_host
+  name: LG TV
+  customize:
+    sources:
+      - livetv
+      - youtube
+      - netflix
+      - chromecast
+      - plex
+      - disney+
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: !secret webostv_mac
+
+###############################
+#        Services
+###############################
+#clean_up_snapshots_service:
+#  host: 192.168.2.34:8123
+#  token: !secret cleanup_token
+#  number_of_snapshots_to_keep: 3
+
+
+#################################################
+#         Includes                              #
+#################################################
+automation: !include automations.yaml
+binary_sensor: !include binary_sensors.yaml
+cloud: !include cloud.yaml
+discovery: !include discovery.yaml
+group: !include groups.yaml
+input_datetime: !include input_datetimes.yaml
+input_number: !include input_number.yaml
+input_boolean: !include input_boolean.yaml
+script: !include scripts.yaml
+zone: !include zones.yaml
+
