@@ -3,6 +3,7 @@ views:
   - title: Minimalist
     cards:
 ####ui-lovelace-minimalist/home
+#### title row
       - type: horizontal-stack
         cards:
           - type: custom:button-card
@@ -10,6 +11,9 @@ views:
           - type: custom:button-card
             template: custom_card_title
             name: Welcome to UI-Lovelace-Minimalista
+#### quick link chip card row
+      - type: horizontal-stack
+        cards:
           - type: custom:button-card
             template: chip_temperature
             variables:
@@ -21,7 +25,9 @@ views:
               navigation_path: /ui-lovelace/enviro # the path to navigate to
           - type: custom:button-card
             template: edge
-            
+#### comonly used items row 1 
+      - type: horizontal-stack
+        cards:
           - template: title
             name: Lights
             label: 'home lighting'
@@ -38,16 +44,23 @@ views:
                 service_data: 
                 entity_id: script.romantic_livingroom_lights #must replace with actual script
 
+
+#### new page move to another file
 ####  /ui-lovelace/enviro
 
 ####  ui-lovelace-minimalist/stats      
     # sensor/battery page
+      - type: horizontal-stack
+        cards:
+###first row quick chip links
     #back button
           - type: 'custom:button-card'
             template: chip_back
             variables:
                 ulm_chip_back_path: /ui-lovelace-minimalist/home
-
+ ###battery row
+      - type: horizontal-stack
+        cards:
           - type: 'custom:button-card'
             template: card_battery
             variables:
