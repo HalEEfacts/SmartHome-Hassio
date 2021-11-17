@@ -1,0 +1,57 @@
+button_card_templates: !include_dir_merge_named minimalist-templates/
+views:
+  - title: Minimalist
+    cards:
+####ui-lovelace-minimalist/home
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            template: edge
+          - type: custom:button-card
+            template: custom_card_title
+            name: Welcome to UI-Lovelace-Minimalista
+          - type: custom:button-card
+            template: chip_temperature
+            variables:
+              ulm_chip_temperature_inside: sensor.cpu_temperature
+              ulm_chip_temperature_outside: sensor.temperature
+              ulm_chip_temperature_weather: weather.halifax_shearwater
+            tap_action:
+              action: navigate  
+              navigation_path: /ui-lovelace/enviro # the path to navigate to
+          - type: custom:button-card
+            template: edge
+            
+          - template: title
+            name: Lights
+            label: 'home lighting'
+            type: 'custom:button-card'
+            # bunch of scripts (home, away, movie night, etc)
+          - type: 'custom:button-card'
+            template: card_script
+            variables: 
+                ulm_card_script_title: Romantic lights
+                ulm_card_script_icon: 'mdi:candle'
+            tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data: 
+                entity_id: script.romantic_livingroom_lights #must replace with actual script
+
+####  /ui-lovelace/enviro
+
+####  ui-lovelace-minimalist/stats      
+    # sensor/battery page
+    #back button
+          - type: 'custom:button-card'
+            template: chip_back
+            variables:
+                ulm_chip_back_path: /ui-lovelace-minimalist/home
+
+          - type: 'custom:button-card'
+            template: card_battery
+            variables:
+              ulm_card_battery_attribute: battery_attribute
+            entity: sensor.livingoom_thermometer_battery
+  
+
